@@ -1,0 +1,2687 @@
+allmydata.test.cli.test_admin
+  AdminMigrateCrawler
+    test_already ...                                                       [OK]
+    test_usage ...                                                         [OK]
+allmydata.test.cli.test_alias
+  ListAlias
+    test_list_ascii ...                                                    [OK]
+    test_list_none ...                                                     [OK]
+    test_list_utf_8 ...                                                    [OK]
+allmydata.test.cli.test_backup
+  Backup
+    test_backup ...                                                        [OK]
+    test_backup_with_nonexistent_alias ...                                 [OK]
+    test_backup_without_alias ...                                          [OK]
+    test_exclude_from_tilde_expansion ...                                  [OK]
+    test_exclude_options ...                                               [OK]
+    test_exclude_options_unicode ...                                       [OK]
+    test_ignore_fifo ...                                                   [OK]
+    test_ignore_symlinks ...                                               [OK]
+    test_ignore_unreadable_directory ...                                   [OK]
+    test_ignore_unreadable_file ...                                        [OK]
+allmydata.test.cli.test_backupdb
+  BackupDB
+    test_basic ...                                                         [OK]
+    test_check ...                                                         [OK]
+    test_directory ...                                                     [OK]
+    test_fail ...                                                          [OK]
+    test_unicode ...                                                       [OK]
+    test_upgrade_v1_v2 ...                                                 [OK]
+    test_wrong_version ...                                                 [OK]
+allmydata.test.cli.test_check
+  Check
+    test_check ...                                                         [OK]
+    test_check_with_multiple_aliases ...                                   [OK]
+    test_check_with_nonexistent_alias ...                                  [OK]
+    test_check_without_alias ...                                           [OK]
+    test_deep_check ...                                                    [OK]
+allmydata.test.cli.test_cli
+  Admin
+    test_derive_pubkey ...                                                 [OK]
+    test_generate_keypair ...                                              [OK]
+  CLI
+    test_alias ...                                                         [OK]
+    test_alias_tolerance ...                                               [OK]
+    test_catalog_shares_error ...                                          [OK]
+    test_dump_cap_chk ...                                                  [OK]
+    test_dump_cap_chk_directory ...                                        [OK]
+    test_dump_cap_lit ...                                                  [OK]
+    test_dump_cap_mdmf ...                                                 [OK]
+    test_dump_cap_mdmf_directory ...                                       [OK]
+    test_dump_cap_sdmf ...                                                 [OK]
+    test_dump_cap_sdmf_directory ...                                       [OK]
+    test_exception_catcher ... 
+Usage: tahoe [global-options] <command> [command-options]
+
+Global options:
+  -V, --version                  Display version numbers.
+  -d, --node-directory=          Specify which Tahoe node directory should be
+                                 used. The directory should either contain a
+                                 full Tahoe node, or a file named node.url that
+                                 points to some other Tahoe node. It should also
+                                 contain a file named 'private/aliases' which
+                                 contains the mapping from alias name to root
+                                 dirnode URI. [default for most commands:
+                                 '/Users/asyncverse/.tahoe']
+      --eliot-destination=       Add an Eliot logging destination.  May be given
+                                 more than once.
+      --help                     Display this help and exit.
+      --help-eliot-destinations  Emit usage information for --eliot-destination.
+  -q, --quiet                    Operate silently.
+      --version-and-path         Display version numbers and paths to their
+                                 locations.
+      --wormhole-invite-appid=   The appid to use on the wormhole server.
+                                 [default: tahoe-lafs.org/invite]
+      --wormhole-server=         The magic wormhole server to use. [default:
+                                 ws://wormhole.tahoe-lafs.org:4000/v1]
+Commands:
+    add-alias              Add a new alias cap.
+    admin                  admin subcommands: use 'tahoe admin' for a list
+    backup                 Make target dir look like local dir.
+    check                  Check a single file or directory.
+    cp                     Copy one or more files or directories.
+    create-alias           Create a new alias cap.
+    create-client          Create a client node (with storage initially
+                           disabled).
+    create-introducer      Create an introducer node.
+    create-node            Create a node that acts as a client, server or both.
+    debug                  debug subcommands: use 'tahoe debug' for a list.
+    deep-check             Check all files/directories reachable from a starting
+                           point.
+    get                    Retrieve a file from the grid.
+    invite                 Invite a new node to this grid
+    list-aliases           List all alias caps.
+    ln                     Make an additional link to an existing file or
+                           directory.
+    ls                     List a directory.
+    manifest               List all files/directories in a subtree.
+    mkdir                  Create a new directory.
+    mv                     Move a file within the grid.
+    put                    Upload a file into the grid.
+    run                    run a node without daemonizing
+    stats                  Print statistics about all files/directories in a
+                           subtree.
+    status                 Various status information.
+    unlink                 Unlink a file or directory on the grid.
+    webopen                Open a web browser to a grid file or directory.
+
+Please run 'tahoe <command> --help' for more details on each command.
+
+tahoe:  must specify a command
+
+                                            [OK]
+    test_listdir_unicode_good ...                                          [OK]
+  Errors
+    test_broken_socket ...                                                 [OK]
+    test_get ...                                                           [OK]
+  Get
+    test_get_with_nonexistent_alias ...                                    [OK]
+    test_get_without_alias ...                                             [OK]
+  Help
+    test_add_alias ...                                                     [OK]
+    test_backup ...                                                        [OK]
+    test_check ...                                                         [OK]
+    test_cp ...                                                            [OK]
+    test_create_alias ...                                                  [OK]
+    test_create_client ...                                                 [OK]
+    test_create_introducer ...                                             [OK]
+    test_create_node ...                                                   [OK]
+    test_debug_flogtool ...                                                [OK]
+    test_deep_check ...                                                    [OK]
+    test_get ...                                                           [OK]
+    test_list_aliases ...                                                  [OK]
+    test_ln ...                                                            [OK]
+    test_ls ...                                                            [OK]
+    test_manifest ...                                                      [OK]
+    test_mkdir ...                                                         [OK]
+    test_mv ...                                                            [OK]
+    test_put ...                                                           [OK]
+    test_run ...                                                           [OK]
+    test_stats ...                                                         [OK]
+    test_unlink ...                                                        [OK]
+    test_webopen ...                                                       [OK]
+  Ln
+    test_ln_with_nonexistent_alias ...                                     [OK]
+    test_ln_without_alias ...                                              [OK]
+  Manifest
+    test_manifest_with_nonexistent_alias ...                               [OK]
+    test_manifest_without_alias ...                                        [OK]
+  Mkdir
+    test_mkdir ...                                                         [OK]
+    test_mkdir_bad_mutable_type ...                                        [OK]
+    test_mkdir_mutable_type ...                                            [OK]
+    test_mkdir_mutable_type_unlinked ...                                   [OK]
+    test_mkdir_unicode ...                                                 [OK]
+    test_mkdir_with_nonexistent_alias ...                                  [OK]
+  Options
+    test_basedir ...                                                       [OK]
+    test_list ...                                                          [OK]
+    test_quiet ...                                                         [OK]
+    test_version ...                                                       [OK]
+  Stats
+    test_empty_directory ...                                               [OK]
+    test_stats_with_nonexistent_alias ...                                  [OK]
+    test_stats_without_alias ...                                           [OK]
+  Unlink
+    test_unlink_with_nonexistent_alias ...                                 [OK]
+    test_unlink_without_alias ...                                          [OK]
+    test_unlink_without_path ...                                           [OK]
+  Webopen
+    test_webopen ...                                                       [OK]
+    test_webopen_with_nonexistent_alias ...                                [OK]
+allmydata.test.cli.test_cp
+  CopyOut
+    test_cp_out ...                                                        [OK]
+  Cp
+    test_copy_using_filecap ...                                            [OK]
+    test_cp_copies_dir ...                                                 [OK]
+    test_cp_duplicate_directories ...                                      [OK]
+    test_cp_immutable_file ...                                             [OK]
+    test_cp_overwrite_readonly_mutable_file ...                            [OK]
+    test_cp_replaces_mutable_file_contents ...                             [OK]
+    test_cp_verbose ...                                                    [OK]
+    test_cp_with_nonexistent_alias ...                                     [OK]
+    test_dangling_symlink_vs_recursion ...                                 [OK]
+    test_not_enough_args ...                                               [OK]
+    test_ticket_2027 ...                                                   [OK]
+    test_unicode_dirnames ...                                              [OK]
+    test_unicode_filename ...                                              [OK]
+allmydata.test.cli.test_create
+  Config
+    test_client ...                                                        [OK]
+    test_client_basedir_exists ...                                         [OK]
+    test_client_hide_ip ...                                                [OK]
+    test_client_hide_ip_no_i2p_txtorcon ...                                [OK]
+    test_client_hide_ip_no_txtorcon ...                                    [OK]
+    test_client_i2p_option_no_txi2p ...                                    [OK]
+    test_client_tor_option_no_txtorcon ...                                 [OK]
+    test_client_unrecognized_options ...                                   [OK]
+    test_create_client_config ...                                          [OK]
+    test_illegal_shares_total ...                                          [OK]
+    test_introducer_basedir_exists ...                                     [OK]
+    test_introducer_hide_ip ...                                            [OK]
+    test_introducer_hostname ...                                           [OK]
+    test_introducer_no_hostname ...                                        [OK]
+    test_node ...                                                          [OK]
+    test_node_basedir_exists ...                                           [OK]
+    test_node_hide_ip ...                                                  [OK]
+    test_node_hostname ...                                                 [OK]
+    test_node_hostname_port_location ...                                   [OK]
+    test_node_listen_bad ...                                               [OK]
+    test_node_listen_none ...                                              [OK]
+    test_node_listen_none_errors ...                                       [OK]
+    test_node_listen_tcp_no_hostname ...                                   [OK]
+    test_node_listen_tor_hostname ...                                      [OK]
+    test_node_location_only ...                                            [OK]
+    test_node_port_location ...                                            [OK]
+    test_node_port_only ...                                                [OK]
+    test_node_slow_i2p ...                                                 [OK]
+    test_node_slow_tor ...                                                 [OK]
+    test_non_default_storage_args ...                                      [OK]
+  I2P
+    test_default ...                                                       [OK]
+    test_launch ...                                                        [OK]
+    test_launch_without_listen ...                                         [OK]
+    test_not_both ...                                                      [OK]
+    test_sam_port ...                                                      [OK]
+    test_sam_port_without_listen ...                                       [OK]
+  Tor
+    test_control_port ...                                                  [OK]
+    test_control_port_without_listen ...                                   [OK]
+    test_default ...                                                       [OK]
+    test_launch ...                                                        [OK]
+    test_launch_without_listen ...                                         [OK]
+    test_not_both ...                                                      [OK]
+allmydata.test.cli.test_create_alias
+  CreateAlias
+    test_create ...                                                        [OK]
+    test_create_unicode ...                                                [OK]
+allmydata.test
+  cli
+    test_grid_manager ...                                               [ERROR]
+allmydata.test.cli.test_invite
+  Invite
+    test_invite_no_client_abilities ...                                 [ERROR]
+                                [ERROR]
+                                [ERROR]
+    test_invite_no_furl ...                                                [OK]
+    test_invite_no_nick ...                                                [OK]
+    test_invite_no_server_abilities ...                                 [ERROR]
+                                [ERROR]
+                                [ERROR]
+    test_invite_success ...                                             [ERROR]
+                                            [ERROR]
+                                            [ERROR]
+    test_invite_success_read_share_config ...                           [ERROR]
+                          [ERROR]
+                          [ERROR]
+    test_invite_wrong_client_abilities ...                              [ERROR]
+                             [ERROR]
+                             [ERROR]
+    test_invite_wrong_server_abilities ...                              [ERROR]
+                             [ERROR]
+                             [ERROR]
+  Join
+    test_create_node_illegal_option ...                                 [ERROR]
+    test_create_node_join ...                                           [ERROR]
+allmydata.test.cli.test_list
+  List
+    test_list ...                                                          [OK]
+    test_list_mdmf ...                                                     [OK]
+    test_list_mdmf_json ...                                                [OK]
+    test_list_readonly ...                                                 [OK]
+    test_list_with_nonexistent_alias ...                                   [OK]
+    test_list_without_alias ...                                            [OK]
+allmydata.test.cli.test_mv
+  Mv
+    test_mv_behavior ...                                                   [OK]
+    test_mv_error_if_DELETE_fails ...                                      [OK]
+    test_mv_with_nonexistent_alias ...                                     [OK]
+    test_mv_without_alias ...                                              [OK]
+allmydata.test.cli.test_put
+  Put
+    test_format ...                                                        [OK]
+    test_immutable_from_file ...                                           [OK]
+    test_immutable_from_file_unicode ...                                   [OK]
+    test_mutable ...                                                       [OK]
+    test_mutable_type_invalid_format ...                                   [OK]
+    test_mutable_unlinked ...                                              [OK]
+    test_no_leading_slash ...                                              [OK]
+    test_put_to_mdmf_cap ...                                               [OK]
+    test_put_to_sdmf_cap ...                                               [OK]
+    test_put_with_nonexistent_alias ...                                    [OK]
+    test_unlinked_immutable_from_file ...                                  [OK]
+    test_unlinked_immutable_stdin ...                                      [OK]
+allmydata.test.cli.test_run
+  DaemonizeTheRealServiceTests
+    test_port_assignment_required ...                                      [OK]
+    test_privacy_error ...                                                 [OK]
+    test_unknown_config ...                                                [OK]
+  RunTests
+    test_non_numeric_pid ...                                               [OK]
+allmydata.test.cli.test_status
+  CommandStatus
+    test_fetch_error ...                                                   [OK]
+    test_no_operations ...                                                 [OK]
+    test_simple ... ║  put  ║ None ║ ▏               (  0%) ║ Not started
+║  get  ║ mfrggza ║ ▏               (0.0%) ║ idle
+║  pub  ║ None ║                 (???%) ║ Not started
+║ retr  ║ None ║                 (???%) ║ Not started
+║ mapup ║ None ║                 (???%) ║ Not started
+║  ???  ║ None ║                 (???%) ║ []
+║  put  ║ None ║ unknown    ║ Not started
+║  get  ║ mfrggza ║ 12.35 kB   ║ idle
+║  pub  ║ None ║ unknown    ║ Not started
+║ retr  ║ None ║ unknown    ║ Not started
+║ mapup ║ None ║ ?          ║ Not started
+║  ???  ║ None ║ unknown    ║ []
+                                                       [OK]
+  Integration
+    test_help ... Usage: tahoe [global-options] status [options]
+(use 'tahoe --help' to view global options)
+
+Options:
+      --help     Display this help and exit.
+  -v, --verbose  Include publish, retrieve, mapupdate in ops
+      --version  
+Various status information
+                                                         [OK]
+    test_simple ...                                                        [OK]
+  JsonHelpers
+    test_bad_response ...                                                  [OK]
+    test_happy_path ...                                                    [OK]
+    test_happy_path_post ...                                               [OK]
+    test_no_data_returned ...                                              [OK]
+    test_no_post_args ...                                                  [OK]
+    test_post_args_for_get ...                                             [OK]
+  ProgressBar
+    test_ascii0 ...                                                        [OK]
+    test_ascii1 ...                                                        [OK]
+    test_ascii2 ...                                                        [OK]
+    test_ascii3 ...                                                        [OK]
+    test_unicode0 ...                                                      [OK]
+    test_unicode1 ...                                                      [OK]
+allmydata.test.mutable.test_checker
+  Checker
+    test_check_all_bad_blocks ...                                          [OK]
+    test_check_all_bad_sig ...                                             [OK]
+    test_check_good ...                                                    [OK]
+    test_check_mdmf_all_bad_blocks ...                                     [OK]
+    test_check_mdmf_all_bad_sig ...                                        [OK]
+    test_check_mdmf_good ...                                               [OK]
+    test_check_mdmf_no_shares ...                                          [OK]
+    test_check_mdmf_not_enough_shares ...                                  [OK]
+    test_check_no_shares ...                                               [OK]
+    test_check_not_enough_shares ...                                       [OK]
+    test_verify_all_bad_sig ...                                            [OK]
+    test_verify_good ...                                                   [OK]
+    test_verify_mdmf_all_bad_sharedata ...                                 [OK]
+    test_verify_mdmf_bad_encprivkey ...                                    [OK]
+    test_verify_mdmf_bad_encprivkey_uncheckable ...                        [OK]
+    test_verify_mdmf_bad_sig ...                                           [OK]
+    test_verify_mdmf_empty ...                                             [OK]
+    test_verify_mdmf_good ...                                              [OK]
+    test_verify_mdmf_one_bad_block ...                                     [OK]
+    test_verify_one_bad_block ...                                          [OK]
+    test_verify_one_bad_encprivkey ...                                     [OK]
+    test_verify_one_bad_encprivkey_uncheckable ...                         [OK]
+    test_verify_one_bad_sharehash ...                                      [OK]
+    test_verify_one_bad_sig ...                                            [OK]
+    test_verify_sdmf_empty ...                                             [OK]
+allmydata.test.mutable.test_datahandle
+  DataHandle
+    test_datahandle_get_size ...                                           [OK]
+    test_datahandle_get_size_out_of_order ...                              [OK]
+    test_datahandle_read ...                                               [OK]
+allmydata.test.mutable.test_different_encoding
+  DifferentEncoding
+    test_filenode ...                                                      [OK]
+allmydata.test.mutable.test_exceptions
+  Exceptions
+    test_repr ...                                                          [OK]
+allmydata.test.mutable.test_filehandle
+  FileHandle
+    test_close ...                                                         [OK]
+    test_filehandle_file ...                                               [OK]
+    test_filehandle_get_size ...                                           [OK]
+    test_filehandle_get_size_out_of_order ...                              [OK]
+    test_filehandle_read ...                                               [OK]
+allmydata.test.mutable.test_filenode
+  Filenode
+    test_create ...                                                        [OK]
+    test_create_from_mdmf_readcap ...                                      [OK]
+    test_create_from_mdmf_writecap ...                                     [OK]
+    test_create_mdmf ...                                                   [OK]
+    test_create_mdmf_with_initial_contents ...                             [OK]
+    test_create_mdmf_with_initial_contents_function ...                    [OK]
+    test_create_with_initial_contents ...                                  [OK]
+    test_create_with_initial_contents_function ...                         [OK]
+    test_create_with_too_large_contents ...                                [OK]
+    test_download_from_mdmf_cap ...                                        [OK]
+    test_internal_version_from_cap ...                                     [OK]
+    test_max_shares ...                                                    [OK]
+    test_max_shares_mdmf ...                                               [OK]
+    test_mdmf_filenode_cap ...                                             [OK]
+    test_mdmf_write_count ...                                              [OK]
+    test_modify ...                                                        [OK]
+    test_modify_backoffer ...                                              [OK]
+    test_retrieve_producer_mdmf ...                                        [OK]
+    test_serialize ...                                                     [OK]
+    test_single_share ...                                                  [OK]
+    test_size_after_servermap_update ...                                   [OK]
+    test_upload_and_download ...                                           [OK]
+    test_upload_and_download_full_size_keys ...                            [OK]
+    test_upload_and_download_mdmf ...                                      [OK]
+allmydata.test.mutable.test_interoperability
+  Interoperability
+    test_new_downloader_can_read_old_shares ...                            [OK]
+allmydata.test.mutable.test_multiple_encodings
+  MultipleEncodings
+    test_multiple_encodings ...                                            [OK]
+allmydata.test.mutable.test_multiple_versions
+  MultipleVersions
+    test_multiple_versions ...                                             [OK]
+    test_replace ...                                                       [OK]
+allmydata.test.mutable.test_problems
+  Problems
+    test_1654 ...                                                          [OK]
+    test_bad_server ...                                                    [OK]
+    test_bad_server_overlap ...                                            [OK]
+    test_block_and_hash_query_error ...                                    [OK]
+    test_multiply_placed_shares ...                                        [OK]
+    test_privkey_query_error ...                                           [OK]
+    test_privkey_query_missing ...                                         [OK]
+    test_publish_all_servers_bad ...                                       [OK]
+    test_publish_no_servers ...                                            [OK]
+    test_publish_surprise_mdmf ...                                         [OK]
+    test_publish_surprise_sdmf ...                                         [OK]
+    test_retrieve_surprise ...                                             [OK]
+    test_unexpected_shares ...                                             [OK]
+allmydata.test.mutable.test_repair
+  Repair
+    test_check_and_repair_readcap ...                                      [OK]
+    test_mdmf_repairable_5shares ...                                       [OK]
+    test_mdmf_repairable_5shares_checkandrepair ...                        [OK]
+    test_mdmf_unrepairable_0shares ...                                     [OK]
+    test_mdmf_unrepairable_0shares_checkandrepair ...                      [OK]
+    test_mdmf_unrepairable_1share ...                                      [OK]
+    test_mdmf_unrepairable_1share_checkandrepair ...                       [OK]
+    test_merge ...                                                         [OK]
+    test_non_merge ...                                                     [OK]
+    test_repair_empty ...                                                  [OK]
+    test_repair_nop ...                                                    [OK]
+    test_repairable_5shares ...                                            [OK]
+    test_repairable_5shares_checkandrepair ...                             [OK]
+    test_unrepairable_0shares ...                                          [OK]
+    test_unrepairable_0shares_checkandrepair ...                           [OK]
+    test_unrepairable_1share ...                                           [OK]
+    test_unrepairable_1share_checkandrepair ...                            [OK]
+allmydata.test.mutable.test_roundtrip
+  Roundtrip
+    test_all_but_two_shares_vanished_updated_servermap ...                 [OK]
+    test_all_shares_vanished ...                                           [OK]
+    test_basic ...                                                         [OK]
+    test_basic_pubkey_at_end ...                                           [OK]
+    test_corrupt_all_IV ...                                                [OK]
+    test_corrupt_all_N ...                                                 [OK]
+    test_corrupt_all_R ...                                                 [OK]
+    test_corrupt_all_block ...                                             [OK]
+    test_corrupt_all_block_hash_tree ...                                   [OK]
+    test_corrupt_all_block_late ...                                        [OK]
+    test_corrupt_all_datalen ...                                           [OK]
+    test_corrupt_all_encprivkey ...                                        [OK]
+    test_corrupt_all_encprivkey_late ...                                   [OK]
+    test_corrupt_all_k ...                                                 [OK]
+    test_corrupt_all_pubkey ...                                            [OK]
+    test_corrupt_all_segsize ...                                           [OK]
+    test_corrupt_all_seqnum ...                                            [OK]
+    test_corrupt_all_share_hash_chain_hash ...                             [OK]
+    test_corrupt_all_share_hash_chain_number ...                           [OK]
+    test_corrupt_all_sig ...                                               [OK]
+    test_corrupt_all_verbyte ...                                           [OK]
+    test_corrupt_mdmf_block_hash_tree ...                                  [OK]
+    test_corrupt_mdmf_block_hash_tree_late ...                             [OK]
+    test_corrupt_mdmf_share_data ...                                       [OK]
+    test_corrupt_some ...                                                  [OK]
+    test_corrupt_some_mdmf ...                                             [OK]
+    test_download_fails ...                                                [OK]
+    test_no_servers ...                                                    [OK]
+    test_no_servers_download ...                                           [OK]
+allmydata.test.mutable.test_servermap
+  Servermap
+    test_basic ...                                                         [OK]
+    test_fetch_privkey ...                                                 [OK]
+    test_fetch_update ...                                                  [OK]
+    test_mark_bad ...                                                      [OK]
+    test_no_shares ...                                                     [OK]
+    test_not_quite_enough_shares ...                                       [OK]
+    test_servermapupdater_finds_mdmf_files ...                             [OK]
+    test_servermapupdater_finds_sdmf_files ...                             [OK]
+allmydata.test.mutable.test_update
+  Update
+    test_append ...                                                        [OK]
+    test_append_power_of_two ...                                           [OK]
+    test_multiple_segment_replace ...                                      [OK]
+    test_replace_and_extend ...                                            [OK]
+    test_replace_beginning ...                                             [OK]
+    test_replace_in_last_segment ...                                       [OK]
+    test_replace_locations ...                                             [OK]
+    test_replace_middle ...                                                [OK]
+    test_replace_segstart1 ...                                             [OK]
+    test_replace_zero_length_beginning ...                                 [OK]
+    test_replace_zero_length_middle ...                                    [OK]
+    test_replace_zero_length_segstart1 ...                                 [OK]
+    test_update_sdmf ...                                                   [OK]
+allmydata.test.mutable.test_version
+  Version
+    test_cap_after_upload ...                                              [OK]
+    test_debug ...                                                         [OK]
+    test_download_nonexistent_version ...                                  [OK]
+    test_download_version ...                                              [OK]
+    test_get_readonly_version ...                                          [OK]
+    test_get_sequence_number ...                                           [OK]
+    test_mutable_version ...                                               [OK]
+    test_partial_read_mdmf_0 ...                                           [OK]
+    test_partial_read_mdmf_large ...                                       [OK]
+    test_partial_read_sdmf_0 ...                                           [OK]
+    test_partial_read_sdmf_100 ...                                         [OK]
+    test_partial_read_sdmf_2 ...                                           [OK]
+    test_partial_read_sdmf_90 ...                                          [OK]
+    test_read_and_download_mdmf ...                                        [OK]
+    test_read_and_download_sdmf ...                                        [OK]
+    test_read_and_download_sdmf_zero_length ...                            [OK]
+    test_toplevel_modify ...                                               [OK]
+    test_toplevel_overwrite ...                                            [OK]
+    test_version_modify ...                                                [OK]
+allmydata.test.test_abbreviate
+  Abbreviate
+    test_abbrev_time_1s ...                                                [OK]
+    test_abbrev_time_25s ...                                               [OK]
+    test_abbrev_time_day ...                                               [OK]
+    test_abbrev_time_future_5_minutes ...                                  [OK]
+    test_abbrev_time_hours ...                                             [OK]
+    test_abbrev_time_month ...                                             [OK]
+    test_abbrev_time_year ...                                              [OK]
+    test_parse_space ...                                                   [OK]
+    test_space ...                                                         [OK]
+    test_time ...                                                          [OK]
+allmydata.test.test_auth
+  AccountFileCheckerKeyTests
+    test_authenticated ...                                                 [OK]
+    test_missing_signature ...                                             [OK]
+    test_unknown_user ...                                                  [OK]
+    test_unrecognized_key ...                                              [OK]
+    test_wrong_signature ...                                               [OK]
+  AccountFileParserTests
+    test_create_account_maps ...                                           [OK]
+    test_ignore_comments ...                                               [OK]
+    test_load_account_file ...                                             [OK]
+    test_parse_accounts ...                                                [OK]
+    test_parse_accounts_rejects_passwords ...                              [OK]
+allmydata.test.test_base32
+  Base32
+    test_a2b ...                                                           [OK]
+    test_a2b_b2a_match_Pythons ...                                         [OK]
+    test_b2a ...                                                           [OK]
+    test_b2a_or_none ...                                                   [OK]
+allmydata.test.test_base62
+  Base62
+    test_ende_0x00 ...                                                     [OK]
+    test_ende_0x000000 ...                                                 [OK]
+    test_ende_0x01 ...                                                     [OK]
+    test_ende_0x0100 ...                                                   [OK]
+    test_ende_0x010000 ...                                                 [OK]
+    test_ende_longrandstr ...                                              [OK]
+    test_ende_randstr ...                                                  [OK]
+    test_known_values ...                                                  [OK]
+    test_num_octets_that_encode_to_this_many_chars ...                     [OK]
+    test_odd_sizes ...                                                     [OK]
+    test_roundtrip ...                                                     [OK]
+allmydata.test.test_checker
+  AddLease
+    test_875 ...                                                           [OK]
+  BalancingAct
+    test_good_share_hosts ...                                              [OK]
+  TooParallel
+    test_immutable ...                                                     [OK]
+  WebResultsRendering
+    test_check ...                                                         [OK]
+    test_check_and_repair ...                                              [OK]
+    test_deep_check_and_repair_renderer ...                                [OK]
+    test_deep_check_renderer ...                                           [OK]
+    test_literal ...                                                       [OK]
+allmydata.test.test_client
+  AnonymousStorage
+    test_anonymous_storage_disabled ...                                    [OK]
+    test_anonymous_storage_enabled ...                                     [OK]
+    test_anonymous_storage_enabled_then_disabled ...                       [OK]
+  Basic
+    test_absolute_storage_dir ...                                          [OK]
+    test_comment ...                                                       [OK]
+    test_default_storage_dir ...                                           [OK]
+    test_error_on_old_config_files ...                                     [OK]
+    test_helper_furl ...                                                   [OK]
+    test_loadable ...                                                      [OK]
+    test_nodekey_no_storage ...                                            [OK]
+    test_nodekey_yes_storage ...                                           [OK]
+    test_permute ...                                                       [OK]
+    test_permute_with_preferred ...                                        [OK]
+    test_relative_storage_dir ...                                          [OK]
+    test_reserved_1 ...                                                    [OK]
+    test_reserved_2 ...                                                    [OK]
+    test_reserved_3 ...                                                    [OK]
+    test_reserved_4 ...                                                    [OK]
+    test_reserved_bad ...                                                  [OK]
+    test_secrets ...                                                       [OK]
+    test_storage_anonymous_disabled_by_storage ...                         [OK]
+    test_storage_anonymous_disabled_explicitly ...                         [OK]
+    test_storage_anonymous_enabled_by_default ...                          [OK]
+    test_storage_anonymous_enabled_explicitly ...                          [OK]
+    test_unreadable_config ...                                             [OK]
+    test_unreadable_introducers ...                                        [OK]
+    test_versions ...                                                      [OK]
+    test_web_apiauthtoken ...                                              [OK]
+    test_web_staticdir ...                                                 [OK]
+  IntroducerClients
+    test_invalid_introducer_furl ...                                       [OK]
+  NodeMakerTests
+    test_cache_expired ...                                                 [OK]
+    test_cached_result ...                                                 [OK]
+    test_maker ...                                                         [OK]
+  Run
+    test_loadable ...                                                      [OK]
+    test_reloadable ...                                                    [OK]
+  StorageAnnouncementTests
+    test_anonymous_storage_announcement ...                                [OK]
+    test_broken_storage_plugin ...                                         [OK]
+    test_multiple_storage_plugin_announcements ...                         [OK]
+    test_no_announcement ...                                               [OK]
+    test_single_storage_plugin_announcement ...                            [OK]
+    test_stable_storage_server_furl ...                                    [OK]
+    test_storage_plugin_not_found ...                                      [OK]
+    test_storage_plugin_without_configuration ...                          [OK]
+  StorageClients
+    test_invalid_static_server ...                                         [OK]
+    test_static_servers ...                                                [OK]
+allmydata.test.test_codec
+  T
+    test_encode ...                                                        [OK]
+    test_encode1 ...                                                       [OK]
+    test_encode2 ...                                                       [OK]
+allmydata.test.test_common_util
+  DisableModulesTests
+    test_dotted_names_rejected ...                                         [OK]
+    test_importerror ...                                                   [OK]
+  TestFlipOneBit
+    test_accepts_byte_string ...                                           [OK]
+    test_rejects_unicode_string ...                                        [OK]
+allmydata.test.test_configutil
+  ConfigUtilTests
+    test_config_dynamic_validation_invalid_item ...                        [OK]
+    test_config_dynamic_validation_invalid_section ...                     [OK]
+    test_config_dynamic_validation_success ...                             [OK]
+    test_config_utils ...                                                  [OK]
+    test_config_validation_invalid_item ...                                [OK]
+    test_config_validation_invalid_section ...                             [OK]
+    test_config_validation_success ...                                     [OK]
+    test_copy_config ...                                                   [OK]
+    test_duplicate_sections ...                                            [OK]
+    test_everything_valid ...                                              [OK]
+    test_nothing_empty_valid ...                                           [OK]
+    test_nothing_valid ...                                                 [OK]
+allmydata.test.test_connection_status
+  Status
+    test_hint_statuses ...                                                 [OK]
+    test_reconnector_connected ...                                         [OK]
+    test_reconnector_connected_listener ...                                [OK]
+    test_reconnector_connected_others ...                                  [OK]
+    test_reconnector_connecting ...                                        [OK]
+    test_reconnector_waiting ...                                           [OK]
+allmydata.test.test_connections
+  Connections
+    test_default ...                                                       [OK]
+    test_tcp_disabled ...                                                  [OK]
+    test_tor ...                                                           [OK]
+    test_tor_unimportable ...                                              [OK]
+    test_unknown ...                                                       [OK]
+  CreateConnectionHandlersTests
+    test_foolscap_handlers ...                                             [OK]
+  I2P
+    test_samport_and_launch ...                                            [OK]
+  Privacy
+    test_connections ...                                                   [OK]
+    test_connections_tcp_disabled ...                                      [OK]
+    test_tub_location_auto ...                                             [OK]
+  Tor
+    test_socksport_bad_endpoint ...                                        [OK]
+    test_socksport_not_integer ...                                         [OK]
+allmydata.test.test_consumer
+  MemoryConsumerTests
+    test_pull_producer ...                                                 [OK]
+    test_push_producer ...                                                 [OK]
+allmydata.test.test_crawler
+  Basic
+    test_empty_subclass ...                                                [OK]
+    test_immediate ...                                                     [OK]
+    test_oneshot ...                                                       [OK]
+    test_paced ...                                                         [OK]
+    test_paced_service ...                                                 [OK]
+    test_service ...                                                       [OK]
+allmydata.test.test_crypto
+  TestEd25519
+    test_deserialize_private_not_bytes ...                                 [OK]
+    test_deserialize_public_not_bytes ...                                  [OK]
+    test_key_serialization ...                                             [OK]
+    test_sign_invalid_pubkey ...                                           [OK]
+    test_signature_data_not_bytes ...                                      [OK]
+    test_signature_not_bytes ...                                           [OK]
+    test_signed_data_not_bytes ...                                         [OK]
+    test_verify_invalid_pubkey ...                                         [OK]
+  TestRegression
+    test_aes_no_iv_process_long_input ...                                  [OK]
+    test_aes_no_iv_process_short_input ...                                 [OK]
+    test_aes_with_iv_process_long_input ...                                [OK]
+    test_aes_with_iv_process_short_input ...                               [OK]
+    test_decode_ed15519_keypair ...                                        [OK]
+    test_decode_huge_rsa_keypair ...                                       [OK]
+    test_decode_rsa_keypair ...                                            [OK]
+    test_decode_tiny_rsa_keypair ...                                       [OK]
+    test_encrypt_data_not_bytes ...                                        [OK]
+    test_incorrect_iv_size ...                                             [OK]
+    test_iv_not_bytes ...                                                  [OK]
+    test_key_incorrect_size ...                                            [OK]
+    test_old_start_up_test ...                                             [OK]
+  TestRsa
+    test_keys ...                                                          [OK]
+    test_sign_invalid_pubkey ...                                           [OK]
+    test_verify_invalid_pubkey ...                                         [OK]
+  TestUtil
+    test_remove_prefix_bad ...                                             [OK]
+    test_remove_prefix_entire_string ...                                   [OK]
+    test_remove_prefix_good ...                                            [OK]
+    test_remove_prefix_partial ...                                         [OK]
+    test_remove_prefix_zero ...                                            [OK]
+allmydata.test.test_deepcheck
+  DeepCheckWebBad
+    test_bad ...                                                           [OK]
+  DeepCheckWebGood
+    test_good ...                                                          [OK]
+  Large
+    test_lots_of_lits ...                                                  [OK]
+  MutableChecker
+    test_corrupt ...                                                       [OK]
+    test_delete_share ...                                                  [OK]
+    test_good ...                                                          [OK]
+allmydata.test.test_deferredutil
+  AsyncToDeferred
+    test_async_to_deferred_exception ...                                   [OK]
+    test_async_to_deferred_success ...                                     [OK]
+  DeferredUtilTests
+    test_failure ...                                                       [OK]
+    test_gather_results ...                                                [OK]
+    test_success ...                                                       [OK]
+    test_wait_for_delayed_calls ...                                        [OK]
+  UntilTests
+    test_exception ...                                                     [OK]
+    test_stops_on_condition ...                                            [OK]
+    test_waits_for_deferred ...                                            [OK]
+allmydata.test.test_dictutil
+  DictUtil
+    test_auxdict ...                                                       [OK]
+    test_dict_of_sets ...                                                  [OK]
+  TypedKeyDict
+    test_bytes ...                                                         [OK]
+    test_unicode ...                                                       [OK]
+  TypedKeyDictPython2
+    test_python2 ...                                                  [SKIPPED]
+allmydata.test.test_dirnode
+  Adder
+    test_overwrite ...                                                     [OK]
+  DeepStats
+    test_stats ...                                                         [OK]
+  Deleter
+    test_retry ...                                                         [OK]
+  Dirnode
+    test_basic ...                                                         [OK]
+    test_basic_mdmf ...                                                    [OK]
+    test_check ...                                                         [OK]
+    test_create ...                                                        [OK]
+    test_create_mdmf ...                                                   [OK]
+    test_create_subdirectory ...                                           [OK]
+    test_create_subdirectory_mdmf ...                                      [OK]
+    test_deepcheck ...                                                     [OK]
+    test_deepcheck_and_repair ...                                          [OK]
+    test_deepcheck_and_repair_mdmf ...                                     [OK]
+    test_deepcheck_cachemisses ...                                         [OK]
+    test_deepcheck_mdmf ...                                                [OK]
+    test_deepcheck_problems ...                                            [OK]
+    test_deepcheck_problems_mdmf ...                                       [OK]
+    test_directory_representation ...                                      [OK]
+    test_immutable ...                                                     [OK]
+    test_initial_children ...                                              [OK]
+    test_mdmf_initial_children ...                                         [OK]
+    test_readonly ...                                                      [OK]
+    test_readonly_mdmf ...                                                 [OK]
+    test_update_metadata ...                                               [OK]
+  Dirnode2
+    test_from_future ...                                                   [OK]
+    test_unknown_strip_prefix_for_ro ...                                   [OK]
+    test_unknownnode ...                                                   [OK]
+  Packing
+    test_deep_immutable ...                                                [OK]
+    test_pack_unpack_unicode_hypothesis ...                                [OK]
+    test_pack_unpack_unknown ...                                           [OK]
+    test_unpack_and_pack_behavior ...                                      [OK]
+allmydata.test.test_download
+  Corruption
+    test_each_byte ...                                                     [OK]
+    test_failure ...                                                       [OK]
+  DownloadTest
+    test_badguess ...                                                      [OK]
+    test_download ...                                                      [OK]
+    test_download_bad_segment ...                                          [OK]
+    test_download_failover ...                                             [OK]
+    test_download_no_overrun ...                                           [OK]
+    test_download_segment ...                                              [OK]
+    test_download_segment_bad_ciphertext_hash ...                          [OK]
+    test_download_segment_cancel ...                                       [OK]
+    test_download_segment_terminate ...                                    [OK]
+    test_duplicate_shares ...                                              [OK]
+    test_long_offset ...                                                   [OK]
+    test_lost_servers ...                                                  [OK]
+    test_pause ...                                                         [OK]
+    test_pause_then_stop ...                                               [OK]
+    test_sequential_goodguess ...                                          [OK]
+    test_simul_1fail_1cancel ...                                           [OK]
+    test_simultaneous_badguess ...                                         [OK]
+    test_simultaneous_get_blocks ...                                       [OK]
+    test_simultaneous_goodguess ...                                        [OK]
+    test_simultaneous_onefails ...                                         [OK]
+    test_stop ...                                                          [OK]
+    test_stop_immediately ...                                              [OK]
+    test_stop_immediately2 ...                                             [OK]
+    test_verifycap ...                                                     [OK]
+  DownloadV2
+    test_download ...                                                      [OK]
+    test_download_no_overrun ...                                           [OK]
+  Selection
+    test_avoid_bad_diversity_late ...                                      [OK]
+    test_avoid_redundancy ...                                              [OK]
+    test_failure ...                                                       [OK]
+    test_good_diversity_early ...                                          [OK]
+    test_good_diversity_late ...                                           [OK]
+    test_no_shares ...                                                     [OK]
+    test_only_one_share ...                                                [OK]
+    test_overdue ...                                                       [OK]
+    test_overdue_fails ...                                                 [OK]
+    test_suffer_bad_diversity_early ...                                    [OK]
+    test_suffer_bad_diversity_late ...                                     [OK]
+  Status
+    test_active ...                                                        [OK]
+    test_progress ...                                                      [OK]
+    test_status ...                                                        [OK]
+allmydata.test.test_eliotutil
+  EliotLoggedTestTests
+    test_fails ...                                                         [OK]
+    test_logs_non_utf_8_byte ...                                           [OK]
+    test_returns_fired_deferred ...                                        [OK]
+    test_returns_none ...                                                  [OK]
+    test_returns_unfired_deferred ...                                      [OK]
+    test_unserializable_fails ...                                          [OK]
+  EliotLoggingTests
+    test_skip_cleans_up ...                                                [OK]
+    test_stdlib_event_relayed ...                                          [OK]
+    test_twisted_event_relayed ...                                         [OK]
+    test_validation_failure ...                                            [OK]
+  LogCallDeferredTests
+    test_raise_exception ...                                               [OK]
+    test_return_value ...                                                  [OK]
+  ParseDestinationDescriptionTests
+    test_regular_file ...                                                  [OK]
+    test_stdout ...                                                        [OK]
+allmydata.test.test_encode
+  Encode
+    test_send_100 ...                                                      [OK]
+    test_send_101 ...                                                      [OK]
+    test_send_124 ...                                                      [OK]
+    test_send_125 ...                                                      [OK]
+    test_send_51 ...                                                       [OK]
+    test_send_74 ...                                                       [OK]
+    test_send_75 ...                                                       [OK]
+    test_send_76 ...                                                       [OK]
+    test_send_99 ...                                                       [OK]
+  Roundtrip
+    test_100 ...                                                           [OK]
+    test_101 ...                                                           [OK]
+    test_124 ...                                                           [OK]
+    test_125 ...                                                           [OK]
+    test_51 ...                                                            [OK]
+    test_74 ...                                                            [OK]
+    test_75 ...                                                            [OK]
+    test_76 ...                                                            [OK]
+    test_99 ...                                                            [OK]
+  ValidatedExtendedURIProxy
+    test_accept_minimal ...                                                [OK]
+    test_accept_optional ...                                               [OK]
+    test_reject_insufficient ...                                           [OK]
+    test_reject_optional ...                                               [OK]
+allmydata.test.test_encodingutil
+  EncodingUtilNonUnicodePlatform
+    test_listdir_unicode ...                                          [SKIPPED]
+  FilePaths
+    test_extend_filepath ...                                               [OK]
+    test_to_filepath ...                                                   [OK]
+    test_unicode_from_filepath ...                                         [OK]
+    test_unicode_segments_from ...                                         [OK]
+  MacOSXLeopard
+    test_listdir_unicode ...                                               [OK]
+    test_unicode_platform_py2 ...                                     [SKIPPED]
+    test_unicode_platform_py3 ...                                          [OK]
+    test_unicode_to_argv ...                                               [OK]
+    test_unicode_to_output_py2 ...                                    [SKIPPED]
+    test_unicode_to_output_py3 ...                                         [OK]
+    test_unicode_to_url ...                                                [OK]
+  QuoteOutput
+    test_quote_output_ascii ...                                            [OK]
+    test_quote_output_default ...                                          [OK]
+    test_quote_output_latin1 ...                                           [OK]
+    test_quote_output_utf8 ...                                             [OK]
+  QuotePaths
+    test_quote_filepath ...                                                [OK]
+    test_quote_path ...                                                    [OK]
+  StdlibUnicode
+    test_mkdir_open_exists_abspath_listdir_expanduser ...                  [OK]
+    test_open_unrepresentable ...                                     [SKIPPED]
+  TestToFromStr
+    test_from_utf8_or_none ...                                             [OK]
+    test_to_bytes ...                                                      [OK]
+  UbuntuKarmicUTF8
+    test_listdir_unicode ...                                               [OK]
+    test_unicode_platform_py2 ...                                     [SKIPPED]
+    test_unicode_platform_py3 ...                                          [OK]
+    test_unicode_to_argv ...                                               [OK]
+    test_unicode_to_output_py2 ...                                    [SKIPPED]
+    test_unicode_to_output_py3 ...                                         [OK]
+    test_unicode_to_url ...                                                [OK]
+  Windows
+    test_listdir_unicode ...                                          [SKIPPED]
+    test_unicode_platform_py2 ...                                     [SKIPPED]
+    test_unicode_platform_py3 ...                                          [OK]
+    test_unicode_to_argv ...                                               [OK]
+    test_unicode_to_output_py2 ...                                    [SKIPPED]
+    test_unicode_to_output_py3 ...                                         [OK]
+    test_unicode_to_url ...                                                [OK]
+allmydata.test.test_filenode
+  LiteralChecker
+    test_literal_filenode ...                                              [OK]
+  Node
+    test_chk_filenode ...                                                  [OK]
+    test_literal_filenode ...                                              [OK]
+    test_mutable_filenode ...                                              [OK]
+    test_mutable_filenode_equality ...                                     [OK]
+allmydata.test.test_grid_manager
+  GridManagerUtilities
+    test_load_certificates ...                                          [ERROR]
+  GridManagerVerifier
+    test_add_cert ...                                                      [OK]
+    test_invalid_bad_private_key ...                                    [ERROR]
+    test_invalid_no_private_key ...                                     [ERROR]
+    test_invalid_no_version ...                                         [ERROR]
+    test_invalid_storage_server ...                                     [ERROR]
+    test_parse_cert ...                                                    [OK]
+    test_parse_cert_missing_signature ...                                  [OK]
+    test_parse_cert_not_dict ...                                           [OK]
+    test_remove ...                                                        [OK]
+    test_serialize ...                                                  [ERROR]
+    test_sign_cert ...                                                  [ERROR]
+    test_sign_cert_wrong_name ...                                          [OK]
+    test_validate_cert ...                                              [ERROR]
+allmydata.test.test_happiness
+  Happiness
+    test_100 ...                                                           [OK]
+    test_calc_happy ...                                                    [OK]
+    test_everything_broken ...                                             [OK]
+    test_hypothesis0 ...                                                   [OK]
+    test_hypothesis_0 ...                                                  [OK]
+    test_hypothesis_1 ...                                                  [OK]
+    test_placement_1 ...                                                   [OK]
+    test_placement_simple ...                                              [OK]
+    test_redistribute ...                                                  [OK]
+    test_unhappy ...                                                       [OK]
+  HappinessUploadUtils
+    test_residual_0 ...                                                    [OK]
+    test_trivial_flow_graph ...                                            [OK]
+    test_trivial_maximum_graph ...                                         [OK]
+  HappinessUtilTests
+    test_merge_servers ...                                                 [OK]
+    test_servers_of_happiness_utility_function ...                         [OK]
+    test_shares_by_server ...                                              [OK]
+  PlacementTests
+    test_hypothesis_unhappy ...                                            [OK]
+    test_more_hypothesis ...                                               [OK]
+allmydata.test.test_hashtree
+  Complete
+    test_create ...                                                        [OK]
+    test_dump ...                                                          [OK]
+    test_needed_hashes ...                                                 [OK]
+  Incomplete
+    test_check ...                                                         [OK]
+    test_create ...                                                        [OK]
+    test_depth_of ...                                                      [OK]
+    test_large ...                                                         [OK]
+    test_needed_hashes ...                                                 [OK]
+allmydata.test.test_hashutil
+  HashUtilTests
+    test_chk ...                                                           [OK]
+    test_convergence_hasher_out_of_bounds ...                              [OK]
+    test_convergence_hasher_tag ...                                        [OK]
+    test_hashers ...                                                       [OK]
+    test_known_answers ...                                                 [OK]
+    test_random_key ...                                                    [OK]
+    test_sha256d ...                                                       [OK]
+    test_sha256d_truncated ...                                             [OK]
+    test_storage_index_hash_known_answers ...                              [OK]
+    test_timing_safe_compare ...                                           [OK]
+allmydata.test.test_helper
+  AssistedUpload
+    test_already_uploaded ...                                              [OK]
+    test_concurrent ...                                                    [OK]
+    test_one ...                                                           [OK]
+    test_previous_upload_failed ...                                        [OK]
+  CHKCheckerAndUEBFetcherTests
+    test_check_no_peers ...                                                [OK]
+    test_check_ueb_unavailable ...                                         [OK]
+    test_enough_shares ...                                                 [OK]
+    test_not_enough_shares ...                                             [OK]
+allmydata.test.test_humanreadable
+  HumanReadable
+    test_repr ...                                                          [OK]
+allmydata.test.test_hung_server
+  HungServerDownloadTest
+    test_10_good_copied_share ...                                          [OK]
+    test_10_good_sanity_check ...                                          [OK]
+    test_2_good_8_broken_copied_share ...                                  [OK]
+    test_2_good_8_broken_duplicate_share_fail ...                          [OK]
+    test_2_good_8_broken_fail ...                                          [OK]
+    test_2_good_8_hung_then_1_recovers_immutable ...                       [OK]
+    test_2_good_8_hung_then_1_recovers_mutable ...                    [SKIPPED]
+    test_2_good_8_hung_then_1_recovers_with_2_shares_immutable ...         [OK]
+    test_2_good_8_hung_then_1_recovers_with_2_shares_mutable ...      [SKIPPED]
+    test_2_good_8_noshares_fail ...                                        [OK]
+    test_3_good_7_hung_immutable ...                                       [OK]
+    test_3_good_7_hung_mutable ...                                    [SKIPPED]
+    test_3_good_7_noshares ...                                             [OK]
+    test_5_overdue_immutable ...                                           [OK]
+allmydata.test.test_i2p_provider
+  ConnectToI2P
+    test_connect ...                                                       [OK]
+    test_connect_endpoint ...                                              [OK]
+    test_connect_unreachable ...                                           [OK]
+  CreateDest
+    test_launch ...                                                        [OK]
+    test_launch_executable ...                                             [OK]
+    test_no_txi2p ...                                                      [OK]
+    test_sam_endpoint ...                                                  [OK]
+  Provider
+    test_build ...                                                         [OK]
+    test_handler_configdir ...                                             [OK]
+    test_handler_default ...                                               [OK]
+    test_handler_disabled ...                                              [OK]
+    test_handler_launch ...                                                [OK]
+    test_handler_launch_configdir ...                                      [OK]
+    test_handler_launch_configdir_executable ...                           [OK]
+    test_handler_launch_executable ...                                     [OK]
+    test_handler_no_i2p ...                                                [OK]
+    test_handler_sam_endpoint ...                                          [OK]
+  ProviderListener
+    test_listener ...                                                      [OK]
+  Provider_CheckI2PConfig
+    test_default ...                                                       [OK]
+    test_launch_not_implemented ...                                        [OK]
+    test_missing_keys ...                                                  [OK]
+    test_no_launch_no_control ...                                          [OK]
+    test_no_txi2p ...                                                      [OK]
+    test_ok ...                                                            [OK]
+  TryToConnect
+    test_try ...                                                           [OK]
+    test_try_handled_error ...                                             [OK]
+    test_try_unhandled_error ...                                           [OK]
+allmydata.test.test_immutable
+  LiteralFileNodeTests
+    test_equality ...                                                      [OK]
+  Test
+    test_download ...                                                      [OK]
+    test_download_abort_if_too_many_corrupted_shares ...                   [OK]
+    test_download_abort_if_too_many_missing_shares ...                     [OK]
+    test_download_best_version ...                                         [OK]
+    test_download_from_only_3_remaining_shares ...                         [OK]
+    test_download_from_only_3_shares_with_good_crypttext_hash ...          [OK]
+    test_download_to_data ...                                              [OK]
+    test_get_best_readable_version ...                                     [OK]
+    test_get_size_of_best_version ...                                      [OK]
+    test_test_code ...                                                     [OK]
+  TestShareFinder
+    test_no_reneging_on_no_more_shares_ever ...                            [OK]
+allmydata.test.test_introducer
+  Announcements
+    test_client_cache ...                                                  [OK]
+    test_client_v2_signed ...                                              [OK]
+  Client
+    test_duplicate_receive_v2 ...                                          [OK]
+  ClientInfo
+    test_client_v2 ...                                                     [OK]
+  ClientSeqnums
+    test_client ...                                                        [OK]
+  DecodeFurl
+    test_decode ...                                                        [OK]
+  Introducer
+    test_create ...                                                        [OK]
+    test_listen ...                                                        [OK]
+  Node
+    test_backwards_compat_import ...                                       [OK]
+    test_create ...                                                        [OK]
+    test_furl ...                                                          [OK]
+    test_introducer_clients_unloadable ...                                 [OK]
+    test_web_static ...                                                    [OK]
+  NonV1Server
+    test_failure ...                                                       [OK]
+  Queue
+    test_queue_until_connected ...                                         [OK]
+  Server
+    test_duplicate ...                                                     [OK]
+  Signatures
+    test_sign ...                                                          [OK]
+    test_unsigned_announcement ...                                         [OK]
+  SystemTest
+    test_system_v2_server ...                                              [OK]
+allmydata.test.test_iputil
+  GcUtil
+    test_gc_after_allocations ...                                          [OK]
+    test_release_delays_gc ...                                             [OK]
+  GetLocalAddressesSyncTests
+    test_some_ipv4_addresses ...                                           [OK]
+  ListenOnUsed
+    test_random_port ...                                                   [OK]
+    test_specific_port ...                                                 [OK]
+allmydata.test.test_istorageserver
+  FoolscapImmutableAPIsTests
+    test_abort ...                                                         [OK]
+    test_add_lease_non_existent ...                                        [OK]
+    test_add_lease_renewal ...                                             [OK]
+    test_add_new_lease ...                                                 [OK]
+    test_advise_corrupt_share ...                                          [OK]
+    test_allocate_buckets_creates_lease ...                                [OK]
+    test_allocate_buckets_new ...                                          [OK]
+    test_allocate_buckets_repeat ...                                       [OK]
+    test_bucket_advise_corrupt_share ...                                   [OK]
+    test_disconnection ...                                                 [OK]
+    test_get_buckets_skips_unfinished_buckets ...                          [OK]
+    test_matching_overlapping_writes ...                                   [OK]
+    test_non_matching_overlapping_writes ...                               [OK]
+    test_read_bucket_at_offset ...                                         [OK]
+    test_written_shares_are_allocated ...                                  [OK]
+    test_written_shares_are_readable ...                                   [OK]
+  FoolscapMutableAPIsTests
+    test_SATRAW_reads_happen_before_writes_in_single_query ...             [OK]
+    test_SATRAW_reads_past_end_of_data ...                                 [OK]
+    test_SATRAW_tests_past_end_of_data ...                                 [OK]
+    test_SATRAW_writes_happens_only_if_test_matches ...                    [OK]
+    test_STARAW_create_lease ...                                           [OK]
+    test_STARAW_new_lease ...                                              [OK]
+    test_STARAW_reads_after_write ...                                      [OK]
+    test_STARAW_renews_lease ...                                           [OK]
+    test_STARAW_write_enabler_must_match ...                               [OK]
+    test_STARAW_zero_new_length_deletes ...                                [OK]
+    test_add_lease_renewal ...                                             [OK]
+    test_add_new_lease ...                                                 [OK]
+    test_advise_corrupt_share ...                                          [OK]
+    test_slot_readv ...                                                    [OK]
+    test_slot_readv_no_shares ...                                          [OK]
+    test_slot_readv_unknown_storage_index ...                              [OK]
+  FoolscapSharedAPIsTests
+    test_version ...                                                       [OK]
+  HTTPImmutableAPIsTests
+    test_abort ...                                                         [OK]
+    test_add_lease_non_existent ...                                        [OK]
+    test_add_lease_renewal ...                                             [OK]
+    test_add_new_lease ...                                                 [OK]
+    test_advise_corrupt_share ...                                          [OK]
+    test_allocate_buckets_creates_lease ...                                [OK]
+    test_allocate_buckets_new ...                                          [OK]
+    test_allocate_buckets_repeat ...                                       [OK]
+    test_bucket_advise_corrupt_share ...                                   [OK]
+    test_get_buckets_skips_unfinished_buckets ...                          [OK]
+    test_matching_overlapping_writes ...                                   [OK]
+    test_non_matching_overlapping_writes ...                               [OK]
+    test_read_bucket_at_offset ...                                         [OK]
+    test_written_shares_are_allocated ...                                  [OK]
+    test_written_shares_are_readable ...                                   [OK]
+  HTTPMutableAPIsTests
+    test_SATRAW_reads_happen_before_writes_in_single_query ...             [OK]
+    test_SATRAW_reads_past_end_of_data ...                                 [OK]
+    test_SATRAW_tests_past_end_of_data ...                                 [OK]
+    test_SATRAW_writes_happens_only_if_test_matches ...                    [OK]
+    test_STARAW_create_lease ...                                           [OK]
+    test_STARAW_new_lease ...                                              [OK]
+    test_STARAW_reads_after_write ...                                      [OK]
+    test_STARAW_renews_lease ...                                           [OK]
+    test_STARAW_write_enabler_must_match ...                               [OK]
+    test_STARAW_zero_new_length_deletes ...                                [OK]
+    test_add_lease_renewal ...                                             [OK]
+    test_add_new_lease ...                                                 [OK]
+    test_advise_corrupt_share ...                                          [OK]
+    test_slot_readv ...                                                    [OK]
+    test_slot_readv_no_shares ...                                          [OK]
+    test_slot_readv_unknown_storage_index ...                              [OK]
+  HTTPSharedAPIsTests
+    test_version ...                                                       [OK]
+allmydata.test.test_json_metadata
+  Test_GetFileNodeMetaData_Immutable
+    test_size_is_0 ...                                                     [OK]
+    test_size_is_1000 ...                                                  [OK]
+    test_size_is_None ...                                                  [OK]
+  Test_GetFileNodeMetaData_MDMF
+    test_size_is_0 ...                                                     [OK]
+    test_size_is_1000 ...                                                  [OK]
+    test_size_is_None ...                                                  [OK]
+  Test_GetFileNodeMetaData_SDMF
+    test_size_is_0 ...                                                     [OK]
+    test_size_is_1000 ...                                                  [OK]
+    test_size_is_None ...                                                  [OK]
+allmydata.test.test_log
+  Log
+    test_default_facility ...                                              [OK]
+    test_err ...                                                           [OK]
+    test_grandparent_id ...                                                [OK]
+    test_native_string_keys ...                                            [OK]
+    test_no_prefix ...                                                     [OK]
+    test_numming ...                                                       [OK]
+    test_parent_id ...                                                     [OK]
+    test_with_bytes_prefix ...                                             [OK]
+    test_with_prefix ...                                                   [OK]
+allmydata.test.test_monitor
+  MonitorTests
+    test_cancellation ...                                                  [OK]
+    test_finish ...                                                        [OK]
+    test_status ...                                                        [OK]
+allmydata.test.test_multi_introducers
+  MultiIntroTests
+    test_introducer_count ...                                              [OK]
+    test_read_introducer_furl_from_tahoecfg ...                            [OK]
+    test_reject_default_in_yaml ...                                        [OK]
+  NoDefault
+    test_introducerless ...                                                [OK]
+    test_invalid_equals_yaml ...                                           [OK]
+    test_ok ...                                                            [OK]
+    test_real_yaml ...                                                     [OK]
+allmydata.test.test_netstring
+  Netstring
+    test_encode ...                                                        [OK]
+    test_extra ...                                                         [OK]
+    test_nested ...                                                        [OK]
+    test_split ...                                                         [OK]
+allmydata.test.test_no_network
+  Harness
+    test_create ...                                                        [OK]
+    test_upload ...                                                        [OK]
+allmydata.test.test_node
+  ClientNotListening
+    test_disabled ...                                                      [OK]
+    test_disabled_but_helper ...                                           [OK]
+    test_disabled_but_storage ...                                          [OK]
+  Configuration
+    test_create_client_invalid_config ...                                  [OK]
+    test_read_invalid_config ...                                           [OK]
+  CreateDefaultConnectionHandlersTests
+    test_tcp_disabled ...                                                  [OK]
+  IntroducerNotListening
+    test_port_none_introducer ...                                          [OK]
+  Listeners
+    test_multiple_ports ...                                                [OK]
+    test_tor_i2p_listeners ...                                             [OK]
+  TestCase
+    test_config_items ...                                                  [OK]
+    test_config_items_missing_section ...                                  [OK]
+    test_config_required ...                                               [OK]
+    test_hash_in_furl ...                                                  [OK]
+    test_location1 ...                                                     [OK]
+    test_location2 ...                                                     [OK]
+    test_location_auto_and_explicit ...                                    [OK]
+    test_location_not_set ...                                              [OK]
+    test_logdir_is_str ...                                                 [OK]
+    test_missing_config_item ...                                           [OK]
+    test_private_config ...                                                [OK]
+    test_private_config_missing ...                                        [OK]
+    test_private_config_unreadable ...                                     [OK]
+    test_private_config_unreadable_preexisting ...                         [OK]
+    test_secrets_dir ...                                                   [OK]
+    test_secrets_dir_protected ...                                         [OK]
+    test_set_config_new_section ...                                        [OK]
+    test_set_config_rejects_invalid_config ...                             [OK]
+    test_set_config_replace ...                                            [OK]
+    test_set_config_unescaped_furl_hash ...                                [OK]
+    test_set_config_write ...                                              [OK]
+    test_tahoe_cfg_hash_in_name ...                                        [OK]
+    test_tahoe_cfg_utf8 ...                                                [OK]
+    test_timestamp ...                                                     [OK]
+    test_write_config_unwritable_file ...                                  [OK]
+  TestMissingPorts
+    test_disabled_port_not_tub ...                                         [OK]
+    test_disabled_tub_not_port ...                                         [OK]
+    test_empty_tub_location ...                                            [OK]
+    test_empty_tub_port ...                                                [OK]
+    test_listen_on_zero ...                                                [OK]
+    test_listen_on_zero_with_host ...                                      [OK]
+    test_parsing_all_disabled ...                                          [OK]
+    test_parsing_defaults ...                                              [OK]
+    test_parsing_location_complex ...                                      [OK]
+    test_parsing_tcp ...                                                   [OK]
+    test_tub_location_legacy_tcp ...                                       [OK]
+    test_tub_location_tcp ...                                              [OK]
+allmydata.test.test_observer
+  Observer
+    test_lazy_oneshot ...                                                  [OK]
+    test_observer_list_observer_errors ...                                 [OK]
+    test_observer_list_propagate_keyboardinterrupt ...                     [OK]
+    test_observer_list_reentrant ...                                       [OK]
+    test_observerlist ...                                                  [OK]
+    test_oneshot ...                                                       [OK]
+    test_oneshot_fireagain ...                                             [OK]
+allmydata.test.test_openmetrics
+  OpenMetrics
+    test_spec_compliance ...                                               [OK]
+allmydata.test.test_pipeline
+  Pipeline
+    test_basic ...                                                         [OK]
+    test_errors ...                                                        [OK]
+    test_errors2 ...                                                       [OK]
+allmydata.test.test_python2_regressions
+  PythonTwoRegressions
+    test_new_style_classes ...                                        [SKIPPED]
+allmydata.test.test_repairer
+  Repairer
+    test_harness ...                                                       [OK]
+    test_repair_from_deletion_of_1 ...                                     [OK]
+    test_repair_from_deletion_of_7 ...                                     [OK]
+    test_repairer_servers_of_happiness ...                                 [OK]
+    test_servers_responding ...                                            [OK]
+    test_tiny_reads ...                                                    [OK]
+  Verifier
+    test_check_without_verify ...                                          [OK]
+    test_corrupt_block_hashtree ...                                        [OK]
+    test_corrupt_block_hashtree_offset ...                                 [OK]
+    test_corrupt_crypttext_hashtree ...                                    [OK]
+    test_corrupt_crypttext_hashtree_byte_x221 ...                          [OK]
+    test_corrupt_crypttext_hashtree_offset ...                             [OK]
+    test_corrupt_file_verno ...                                            [OK]
+    test_corrupt_share_hashtree ...                                        [OK]
+    test_corrupt_share_hashtree_offset ...                                 [OK]
+    test_corrupt_share_verno ...                                           [OK]
+    test_corrupt_sharedata ...                                             [OK]
+    test_corrupt_sharedata_last_byte ...                                   [OK]
+    test_corrupt_sharedata_offset ...                                      [OK]
+    test_corrupt_ueb ...                                                   [OK]
+    test_corrupt_ueb_length ...                                            [OK]
+    test_corrupt_ueb_offset ...                                            [OK]
+    test_corrupt_ueb_offset_shortread ...                                  [OK]
+    test_ok_filedata_size ...                                              [OK]
+    test_ok_no_corruption ...                                              [OK]
+    test_ok_segment_size ...                                               [OK]
+    test_ok_sharedata_size ...                                             [OK]
+    test_truncate_crypttext_hashtree ...                                   [OK]
+    test_wrong_share_verno ...                                             [OK]
+allmydata.test.test_runner
+  BinTahoe
+    test_eliot_destination ...                                             [OK]
+    test_escape_in_eliot_destination ...                                   [OK]
+    test_help_eliot_destinations ...                                       [OK]
+    test_malformed_eliot_destination ...                                   [OK]
+    test_unicode_arguments_and_output ...                                  [OK]
+    test_unknown_eliot_destination ...                                     [OK]
+    test_with_python_options ...                                           [OK]
+  CreateNode
+    test_client ...                                                        [OK]
+    test_introducer ...                                                    [OK]
+    test_node ...                                                          [OK]
+    test_subcommands ...                                                   [OK]
+  ParseOptionsTests
+    test_nonascii_unknown_subcommand_python2 ...                      [SKIPPED]
+  ParseOrExitTests
+    test_nonascii_error_content ...                                        [OK]
+  RunNode
+    test_client ...                                                        [OK]
+    test_introducer ...                                                    [OK]
+    test_run_bad_directory ...                                             [OK]
+    test_run_bogus_directory ...                                           [OK]
+allmydata.test.test_sftp
+  Handler
+    test_basic ...                                                         [OK]
+    test_convert_error ...                                                 [OK]
+    test_execCommand_and_openShell ...                                     [OK]
+    test_extendedRequest ...                                               [OK]
+    test_makeDirectory ...                                                 [OK]
+    test_not_implemented ...                                               [OK]
+    test_openDirectory_and_attrs ...                                       [OK]
+    test_openFile_read ...                                                 [OK]
+    test_openFile_read_error ...                                           [OK]
+    test_openFile_write ...                                                [OK]
+    test_removeDirectory ...                                               [OK]
+    test_removeFile ...                                                    [OK]
+    test_renameFile ...                                                    [OK]
+    test_renameFile_posix ...                                              [OK]
+allmydata.test.test_spans
+  ByteSpans
+    test_basic ...                                                         [OK]
+    test_large ...                                                         [OK]
+    test_math ...                                                          [OK]
+    test_overlap ...                                                       [OK]
+    test_random ...                                                        [OK]
+  StringSpans
+    test_basic ...                                                         [OK]
+    test_random ...                                                        [OK]
+    test_test ...                                                          [OK]
+allmydata.test.test_statistics
+  Statistics
+    test_binomial_coeff ...                                                [OK]
+    test_binomial_distribution_pmf ...                                     [OK]
+    test_convolve ...                                                      [OK]
+    test_find_k ...                                                        [OK]
+    test_pr_backup_file_loss ...                                           [OK]
+    test_pr_file_loss ...                                                  [OK]
+    test_repair_cost ...                                                   [OK]
+    test_repair_count_pmf ...                                              [OK]
+    test_survival_pmf ...                                                  [OK]
+allmydata.test.test_stats
+  CPUUsage
+    test_monitor ...                                                       [OK]
+allmydata.test.test_storage
+  Bucket
+    test_bucket_aborting_cancels_timeout ...                               [OK]
+    test_bucket_closing_cancels_timeout ...                                [OK]
+    test_bucket_expires_if_no_writes_for_30_minutes ...                    [OK]
+    test_bucket_writes_delay_timeout ...                                   [OK]
+    test_create ...                                                        [OK]
+    test_overlapping_writes_not_ok_if_different ...                        [OK]
+    test_overlapping_writes_ok_if_matching ...                             [OK]
+    test_read_past_end_of_share_data ...                                   [OK]
+    test_readwrite ...                                                     [OK]
+    test_write_past_size_errors ...                                        [OK]
+    test_writes_return_when_finished ...                                   [OK]
+  BucketProxy
+    test_create ...                                                        [OK]
+    test_readwrite_v1 ...                                                  [OK]
+    test_readwrite_v2 ...                                                  [OK]
+  LeaseInfoTests
+    test_immutable_size ...                                                [OK]
+    test_is_cancel_secret ...                                              [OK]
+    test_is_not_cancel_secret ...                                          [OK]
+    test_is_not_renew_secret ...                                           [OK]
+    test_is_renew_secret ...                                               [OK]
+  MDMFProxies
+    test_end_to_end ...                                                    [OK]
+    test_get_block_with_invalid_segnum ...                                 [OK]
+    test_get_checkstring_first ...                                         [OK]
+    test_get_encoding_parameters_first ...                                 [OK]
+    test_get_root_hash_first ...                                           [OK]
+    test_get_seqnum_first ...                                              [OK]
+    test_invalid_salt_size ...                                             [OK]
+    test_is_sdmf ...                                                       [OK]
+    test_only_reads_one_segment_sdmf ...                                   [OK]
+    test_private_key_after_share_hash_chain ...                            [OK]
+    test_read ...                                                          [OK]
+    test_read_with_different_tail_segment_size ...                         [OK]
+    test_read_with_empty_mdmf_file ...                                     [OK]
+    test_read_with_empty_sdmf_file ...                                     [OK]
+    test_read_with_prefetched_mdmf_data ...                                [OK]
+    test_read_with_prefetched_sdmf_data ...                                [OK]
+    test_reads_sdmf ...                                                    [OK]
+    test_sdmf_writer ...                                                   [OK]
+    test_sdmf_writer_preexisting_share ...                                 [OK]
+    test_signature_after_verification_key ...                              [OK]
+    test_uncoordinated_write ...                                           [OK]
+    test_verinfo_with_mdmf_file ...                                        [OK]
+    test_verinfo_with_sdmf_file ...                                        [OK]
+    test_write ...                                                         [OK]
+    test_write_enforces_order_constraints ...                              [OK]
+    test_write_read_vectors ...                                            [OK]
+    test_write_rejected_with_invalid_blocksize ...                         [OK]
+    test_write_rejected_with_invalid_root_hash ...                         [OK]
+    test_write_rejected_with_invalid_salt ...                              [OK]
+    test_write_rejected_with_too_many_blocks ...                           [OK]
+    test_write_test_vectors ...                                            [OK]
+  MutableServer
+    test_allocate ...                                                      [OK]
+    test_bad_magic ...                                                     [OK]
+    test_container_size ...                                                [OK]
+    test_create ...                                                        [OK]
+    test_enumerate_mutable_shares ...                                      [OK]
+    test_get_slot_leases_empty_slot ...                                    [OK]
+    test_leases ...                                                        [OK]
+    test_mutable_add_lease_renews ...                                      [OK]
+    test_operators ...                                                     [OK]
+    test_readv ...                                                         [OK]
+    test_remove ...                                                        [OK]
+    test_remove_non_present ...                                            [OK]
+    test_writev_without_renew_lease ...                                    [OK]
+  MutableShareFileTests
+    test_readv_reads_share_data ...                                        [OK]
+    test_readv_rejects_negative_length ...                                 [OK]
+  Server
+    test_abort ...                                                         [OK]
+    test_advise_corruption ...                                             [OK]
+    test_advise_corruption_missing ...                                     [OK]
+    test_allocate ...                                                      [OK]
+    test_allocate_without_lease_renewal ...                                [OK]
+    test_bad_container_version ...                                         [OK]
+    test_create ...                                                        [OK]
+    test_declares_available_space ...                                      [OK]
+    test_declares_fixed_1528 ...                                           [OK]
+    test_declares_maximum_share_sizes ...                                  [OK]
+    test_discard ...                                                       [OK]
+    test_disconnect ...                                                    [OK]
+    test_dont_overfill_dirs ...                                            [OK]
+    test_have_shares ...                                                   [OK]
+    test_immutable_add_lease_renews ...                                    [OK]
+    test_large_share ...                                              [SKIPPED]
+    test_leases ...                                                        [OK]
+    test_readonly ...                                                      [OK]
+    test_remove_incoming ...                                               [OK]
+    test_reserved_space ...                                                [OK]
+    test_reserved_space_advise_corruption ...                              [OK]
+    test_reserved_space_immutable_lease ...                                [OK]
+    test_reserved_space_mutable_lease ...                                  [OK]
+    test_seek ...                                                          [OK]
+  ShareFileTests
+    test_avoid_lease_overflow ...                                          [OK]
+    test_cancel_secret ...                                                 [OK]
+    test_large_lease_count_format ...                                      [OK]
+    test_long_lease_count_format ...                                       [OK]
+    test_no_leases_cancelled ...                                           [OK]
+    test_read_write ...                                                    [OK]
+    test_reads_beyond_file_end ...                                         [OK]
+    test_renew_secret ...                                                  [OK]
+    test_too_large_write ...                                               [OK]
+  Stats
+    test_latencies ...                                                     [OK]
+  UtilTests
+    test_encoding ...                                                      [OK]
+    test_get_share_file_immutable ...                                      [OK]
+    test_get_share_file_mutable ...                                        [OK]
+    test_storage_index_to_dir ...                                          [OK]
+allmydata.test.test_storage_client
+  FoolscapStorageServers
+    test_foolscap_provider ...                                             [OK]
+    test_null_provider ...                                                 [OK]
+  GetConnectionStatus
+    test_unrecognized_announcement ...                                     [OK]
+  PluginMatchedAnnouncement
+    test_enabled_no_configuration_plugin ...                               [OK]
+    test_enabled_plugin ...                                                [OK]
+    test_ignored_non_enabled_plugin ...                                    [OK]
+  StoragePluginWebPresence
+    test_plugin_resource_path ...                                          [OK]
+    test_plugin_resource_persistent_across_requests ...                    [OK]
+  TestNativeStorageServer
+    test_get_available_space_new ...                                       [OK]
+    test_get_available_space_old ...                                       [OK]
+    test_missing_nickname ...                                              [OK]
+  TestStorageFarmBroker
+    test_static_permutation_seed_explicit ...                              [OK]
+    test_static_permutation_seed_hashed ...                                [OK]
+    test_static_permutation_seed_pubkey ...                                [OK]
+    test_static_servers ...                                                [OK]
+    test_threshold_reached ...                                             [OK]
+  UnrecognizedAnnouncement
+    test_no_exceptions ...                                                 [OK]
+    test_start_connecting ...                                              [OK]
+    test_stop_connecting ...                                               [OK]
+    test_try_to_connect ...                                                [OK]
+    test_various_data_methods ...                                          [OK]
+allmydata.test.test_storage_http
+  CustomHTTPServerTests
+    test_authorization_enforcement ...                                     [OK]
+    test_client_side_schema_validation ...                                 [OK]
+  ExtractSecretsTests
+    test_bad_secret_missing_value ...                                      [OK]
+    test_bad_secret_not_base64 ...                                         [OK]
+    test_bad_secret_unknown_prefix ...                                     [OK]
+    test_bad_secret_wrong_length_lease_cancel ...                          [OK]
+    test_bad_secret_wrong_length_lease_renew ...                           [OK]
+    test_extract_secrets ...                                               [OK]
+    test_wrong_number_of_secrets ...                                       [OK]
+  GenericHTTPAPITests
+    test_bad_authentication ...                                            [OK]
+    test_server_side_schema_validation ...                                 [OK]
+    test_unsupported_mime_type ...                                         [OK]
+    test_version ...                                                       [OK]
+  HTTPUtilities
+    test_get_content_type ...                                              [OK]
+  ImmutableHTTPAPITests
+    test_abort_upload_allows_reupload ...                                  [OK]
+    test_advise_corrupt_share ...                                          [OK]
+    test_advise_corrupt_share_unknown ...                                  [OK]
+    test_allocate_buckets_second_time_different_shares ...                 [OK]
+    test_lease_on_unknown_storage_index ...                                [OK]
+    test_lease_renew_and_add ...                                           [OK]
+    test_list_shares ...                                                   [OK]
+    test_list_shares_unknown_storage_index ...                             [OK]
+    test_mismatching_upload_fails ...                                      [OK]
+    test_multiple_shares_uploaded_to_different_place ...                   [OK]
+    test_read_of_wrong_share_number_fails ...                              [OK]
+    test_read_of_wrong_storage_index_fails ...                             [OK]
+    test_read_with_negative_offset_fails ...                               [OK]
+    test_read_with_no_range ...                                            [OK]
+    test_timed_out_upload_allows_reupload ...                              [OK]
+    test_too_late_abort ...                                                [OK]
+    test_unauthorized_abort ...                                            [OK]
+    test_unknown_aborts ...                                                [OK]
+    test_upload_bad_content_range ...                                      [OK]
+    test_upload_can_be_downloaded ...                                      [OK]
+    test_upload_non_existent_storage_index ...                             [OK]
+    test_validate_content_range_response_to_read ...                       [OK]
+    test_write_with_wrong_upload_key ...                                   [OK]
+  RouteConverterTests
+    test_bad_characters_storage_index_is_not_parsed ...                    [OK]
+    test_good_storage_index_is_parsed ...                                  [OK]
+    test_invalid_storage_index_is_not_parsed ...                           [OK]
+    test_long_storage_index_is_not_parsed ...                              [OK]
+    test_short_storage_index_is_not_parsed ...                             [OK]
+allmydata.test.test_storage_https
+  HTTPSNurlTests
+    test_spki_hash ...                                                     [OK]
+  PinningHTTPSValidation
+    test_server_certificate_expired ...                                    [OK]
+    test_server_certificate_has_wrong_hash ...                             [OK]
+    test_server_certificate_not_valid_yet ...                              [OK]
+    test_success ...                                                       [OK]
+allmydata.test.test_storage_web
+  BucketCounter
+    test_bucket_counter ...                                                [OK]
+    test_bucket_counter_cleanup ...                                        [OK]
+    test_bucket_counter_eta ...                                            [OK]
+  LeaseCrawler
+    test_bad_mode ...                                                      [OK]
+    test_basic ...                                                         [OK]
+    test_deserialize_history_pickle ...                                    [OK]
+    test_deserialize_pickle ...                                            [OK]
+    test_expire_age ...                                                    [OK]
+    test_expire_cutoff_date ...                                            [OK]
+    test_limited_history ...                                               [OK]
+    test_no_st_blocks ...                                                  [OK]
+    test_only_immutable ...                                                [OK]
+    test_only_mutable ...                                                  [OK]
+    test_share_corruption ...                                              [OK]
+    test_unpredictable_future ...                                          [OK]
+  WebStatus
+    test_huge_reserved ...                                                 [OK]
+    test_no_server ...                                                     [OK]
+    test_readonly ...                                                      [OK]
+    test_reserved ...                                                      [OK]
+    test_status ...                                                        [OK]
+    test_status_bad_disk_stats ...                                         [OK]
+    test_status_no_disk_stats ...                                          [OK]
+    test_status_right_disk_stats ...                                       [OK]
+    test_util ...                                                          [OK]
+allmydata.test.test_system
+  Connections
+    test_rref ...                                                          [OK]
+  SystemTest
+    test_filesystem ...                                                    [OK]
+    test_filesystem_with_cli_in_subprocess ...                             [OK]
+    test_mutable ...                                                       [OK]
+    test_upload_and_download_convergent ...                                [OK]
+    test_upload_and_download_random_key ...                                [OK]
+allmydata.test.test_testing
+  FakeWebTest
+    test_create_and_download ...                                           [OK]
+    test_download_missing ...                                              [OK]
+    test_download_no_arg ...                                               [OK]
+    test_duplicate_upload ...                                              [OK]
+allmydata.test.test_time_format
+  TimeFormat
+    test_epoch ...                                                         [OK]
+    test_epoch_in_London ...                                               [OK]
+    test_format_delta ...                                                  [OK]
+    test_format_time ...                                                   [OK]
+    test_format_time_y2038 ...                                             [OK]
+    test_iso_utc ...                                                       [OK]
+    test_parse_date ...                                                    [OK]
+    test_parse_duration ...                                                [OK]
+allmydata.test.test_tor_provider
+  ConnectToTor
+    test_connect ...                                                       [OK]
+    test_connect_endpoint ...                                              [OK]
+    test_connect_unreachable ...                                           [OK]
+  CreateOnion
+    test_control_endpoint ...                                              [OK]
+    test_launch ...                                                        [OK]
+    test_launch_executable ...                                             [OK]
+    test_no_txtorcon ...                                                   [OK]
+  LaunchTor
+    test_launch ...                                                        [OK]
+    test_launch_executable ...                                             [OK]
+  Provider
+    test_build ...                                                         [OK]
+    test_handler_control_endpoint ...                                      [OK]
+    test_handler_default ...                                               [OK]
+    test_handler_disabled ...                                              [OK]
+    test_handler_launch ...                                                [OK]
+    test_handler_launch_no_txtorcon ...                                    [OK]
+    test_handler_no_tor ...                                                [OK]
+    test_handler_socks_endpoint ...                                        [OK]
+    test_handler_socks_tcp_endpoint ...                                    [OK]
+    test_handler_socks_unix_endpoint ...                                   [OK]
+  ProviderListener
+    test_listener ...                                                      [OK]
+  Provider_CheckOnionConfig
+    test_default ...                                                       [OK]
+    test_no_launch_no_control ...                                          [OK]
+    test_no_txtorcon ...                                                   [OK]
+    test_ok ...                                                            [OK]
+    test_onion_no_external_port ...                                        [OK]
+    test_onion_no_local_port ...                                           [OK]
+    test_onion_no_private_key_file ...                                     [OK]
+  Provider_Service
+    test_control_endpoint ...                                              [OK]
+    test_launch ...                                                        [OK]
+    test_no_onion ...                                                      [OK]
+  TryToConnect
+    test_try ...                                                           [OK]
+    test_try_handled_error ...                                             [OK]
+    test_try_unhandled_error ...                                           [OK]
+allmydata.test.test_upload
+  EncodingParameters
+    test_aborted_shares ...                                                [OK]
+    test_configure_parameters ...                                          [OK]
+    test_dropped_servers_in_encoder ...                                    [OK]
+    test_encoder_bucket_abort ...                                          [OK]
+    test_exception_messages_during_server_selection ...                    [OK]
+    test_existing_share_detection ...                                      [OK]
+    test_happiness_with_all_readonly_servers ...                           [OK]
+    test_happiness_with_some_readonly_servers ...                          [OK]
+    test_happy_semantics ...                                               [OK]
+    test_problem_layout_comment_187 ...                                    [OK]
+    test_problem_layout_comment_52 ...                                     [OK]
+    test_problem_layout_comment_53 ...                                     [OK]
+    test_problem_layout_ticket_1118 ...                                    [OK]
+    test_problem_layout_ticket_1124 ...                                    [OK]
+    test_problem_layout_ticket_1128 ...                                    [OK]
+    test_query_counting ...                                                [OK]
+    test_server_selector_bucket_abort ...                                  [OK]
+    test_upload_succeeds_with_some_homeless_shares ...                     [OK]
+    test_uploader_skips_over_servers_with_only_one_share ...               [OK]
+    test_upper_limit_on_readonly_queries ...                               [OK]
+  EncryptAnUploadableTests
+    test_known_result ...                                                  [OK]
+    test_large_read ...                                                    [OK]
+    test_same_length ...                                                   [OK]
+  FileHandleTests
+    test_get_encryption_key_convergent ...                                 [OK]
+  FullServer
+    test_data_large ...                                                    [OK]
+  GoodServer
+    test_data_large ...                                                    [OK]
+    test_data_large_odd_segments ...                                       [OK]
+    test_data_small ...                                                    [OK]
+    test_data_zero ...                                                     [OK]
+    test_filehandle_large ...                                              [OK]
+    test_filehandle_small ...                                              [OK]
+    test_filehandle_zero ...                                               [OK]
+    test_filename_large ...                                                [OK]
+    test_filename_small ...                                                [OK]
+    test_filename_zero ...                                                 [OK]
+    test_too_large ...                                                     [OK]
+  ServerErrors
+    test_allocation_error_recovery ...                                     [OK]
+    test_allocation_error_some ...                                         [OK]
+    test_first_error ...                                                   [OK]
+    test_first_error_all ...                                               [OK]
+    test_good_servers_stay_writable ...                                    [OK]
+    test_second_error_all ...                                              [OK]
+    test_timeout ...                                                       [OK]
+  ServerSelection
+    test_four_each ...                                                     [OK]
+    test_number_of_servers_contacted ...                                   [OK]
+    test_one_each ...                                                      [OK]
+    test_one_each_plus_one_extra ...                                       [OK]
+    test_some_big_some_small ...                                           [OK]
+    test_three_of_ten ...                                                  [OK]
+    test_two_each ...                                                      [OK]
+  StorageIndex
+    test_params_must_matter ...                                            [OK]
+  Uploadable
+    test_data ...                                                          [OK]
+    test_filehandle_convergent_encryption ...                              [OK]
+    test_filehandle_random_key ...                                         [OK]
+    test_filename ...                                                      [OK]
+allmydata.test.test_uri
+  CHKFile
+    test_pack ...                                                          [OK]
+    test_pack_badly ...                                                    [OK]
+  Compare
+    test_compare ...                                                       [OK]
+    test_has_uri_prefix ...                                                [OK]
+    test_is_literal_file_uri ...                                           [OK]
+    test_is_uri ...                                                        [OK]
+  Constraint
+    test_constraint ...                                                    [OK]
+  Dirnode
+    test_immutable ...                                                     [OK]
+    test_literal ...                                                       [OK]
+    test_mdmf ...                                                          [OK]
+    test_mdmf_attenuation ...                                              [OK]
+    test_mdmf_verifier ...                                                 [OK]
+    test_pack ...                                                          [OK]
+  Extension
+    test_pack ...                                                          [OK]
+  Literal
+    test_empty ...                                                         [OK]
+    test_nonascii ...                                                      [OK]
+    test_pack ...                                                          [OK]
+  Mutable
+    test_create_readonly_mdmf_cap_from_verifycap ...                       [OK]
+    test_create_writeable_mdmf_cap_from_readcap ...                        [OK]
+    test_create_writeable_mdmf_cap_from_verifycap ...                      [OK]
+    test_mdmf_cap_ignore_extensions ...                                    [OK]
+    test_mdmf_from_string ...                                              [OK]
+    test_mdmf_verifier_cap ...                                             [OK]
+    test_pack ...                                                          [OK]
+    test_readonly_mdmf_cap ...                                             [OK]
+    test_writeable_mdmf_cap ...                                            [OK]
+  Unknown
+    test_from_future ...                                                   [OK]
+allmydata.test.test_util
+  FileUtil
+    test_abspath_expanduser_unicode ...                                    [OK]
+    test_create_long_path ...                                              [OK]
+    test_disk_stats ...                                                    [OK]
+    test_disk_stats_avail_nonnegative ...                                  [OK]
+    test_du ...                                                            [OK]
+    test_encrypted_tempfile ...                                            [OK]
+    test_get_pathinfo ...                                                  [OK]
+    test_get_pathinfo_symlink ...                                          [OK]
+    test_make_dirs_with_absolute_mode ...                                  [OK]
+    test_remove_if_possible ...                                            [OK]
+    test_rename ...                                                        [OK]
+    test_rename_no_overwrite ...                                           [OK]
+    test_replace_file ...                                                  [OK]
+    test_rm_dir ...                                                        [OK]
+    test_windows_expanduser_win7 ...                                       [OK]
+    test_windows_expanduser_xp ...                                         [OK]
+    test_write ...                                                         [OK]
+    test_write_atomically ...                                              [OK]
+  IDLib
+    test_nodeid_b2a ...                                                    [OK]
+  JSONBytes
+    test_any_bytes ...                                                     [OK]
+    test_any_bytes_unsupported_by_default ...                              [OK]
+    test_dumps_bytes ...                                                   [OK]
+    test_encode_bytes ...                                                  [OK]
+    test_encode_unicode ...                                                [OK]
+  Math
+    test_round_sigfigs ...                                                 [OK]
+  PollMixinTests
+    test_PollMixin_False_then_True ...                                     [OK]
+    test_PollMixin_True ...                                                [OK]
+    test_timeout ...                                                       [OK]
+  RrefUtilTests
+    test_exceptions ...                                                    [OK]
+    test_version_returned ...                                              [OK]
+  YAML
+    test_convert ...                                                       [OK]
+allmydata.test.test_windows
+  GetArgvTests
+    test_argv_values ...                                              [SKIPPED]
+    test_get_argv_return_type ...                                     [SKIPPED]
+  UnicodeOutputTests
+    test_write_non_ascii ...                                          [SKIPPED]
+allmydata.test.web.test_common
+  RenderExceptionTests
+    test_bytes ...                                                         [OK]
+    test_decodedurl ...                                                    [OK]
+    test_disconnected ...                                                  [OK]
+    test_exception ...                                                     [OK]
+    test_failure ...                                                       [OK]
+    test_none ...                                                          [OK]
+    test_not_done_yet ...                                                  [OK]
+    test_resource ...                                                      [OK]
+    test_unicode ...                                                       [OK]
+    test_unknown ...                                                       [OK]
+allmydata.test.web.test_grid
+  Grid
+    test_add_lease ...                                                     [OK]
+    test_blacklist ...                                                     [OK]
+    test_deep_add_lease ...                                                [OK]
+    test_deep_check ...                                                    [OK]
+    test_deep_check_and_repair ...                                         [OK]
+    test_exceptions ...                                                    [OK]
+    test_filecheck ...                                                     [OK]
+    test_immutable_unknown ...                                             [OK]
+    test_mutant_dirnodes_are_omitted ...                                   [OK]
+    test_repair_html ...                                                   [OK]
+    test_repair_json ...                                                   [OK]
+    test_unknown ...                                                       [OK]
+allmydata.test.web.test_introducer
+  IntroducerRootTests
+    test_json ...                                                          [OK]
+  IntroducerWeb
+    test_basic_information ...                                             [OK]
+    test_json_front_page ...                                               [OK]
+    test_tahoe_css ...                                                     [OK]
+    test_welcome ...                                                       [OK]
+allmydata.test.web.test_logs
+  StreamingEliotLogsTests
+    test_v1 ...                                                            [OK]
+  TestStreamingLogs
+    test_one_log ...                                                       [OK]
+allmydata.test.web.test_private
+  PrivacyTests
+    test_authorized ...                                                    [OK]
+    test_unauthorized ...                                                  [OK]
+    test_wrong_scheme ...                                                  [OK]
+    test_wrong_token ...                                                   [OK]
+allmydata.test.web.test_root
+  RenderRoot
+    test_root_json ...                                                     [OK]
+  RenderServiceRow
+    test_missing ...                                                       [OK]
+  RenderSlashUri
+    test_invalid ...                                                       [OK]
+    test_valid_query_redirect ...                                          [OK]
+allmydata.test.web.test_status
+  DownloadStatusElementTests
+    test_download_status_element ...                                       [OK]
+    test_download_status_element_partial ...                               [OK]
+  StatusTests
+    test_status_page ...                                                   [OK]
+allmydata.test.web.test_util
+  Util
+    test_abbreviate_rate ...                                               [OK]
+    test_abbreviate_size ...                                               [OK]
+    test_abbreviate_time ...                                               [OK]
+    test_compute_rate ...                                                  [OK]
+    test_parse_replace_arg ...                                             [OK]
+    test_plural ...                                                        [OK]
+allmydata.test.web.test_web
+  HumanizeExceptionTests
+    test_filetoolarge ...                                                  [OK]
+    test_mustbereadonly ...                                                [OK]
+  MultiFormatResourceTests
+    test_default_format ...                                                [OK]
+    test_default_format_argument ...                                       [OK]
+    test_explicit_none_format_renderer ...                                 [OK]
+    test_no_format ...                                                     [OK]
+    test_select_format ...                                                 [OK]
+    test_unknown_format ...                                                [OK]
+  Web
+    test_CSS_FILE ...                                                      [OK]
+    test_DELETE_DIRURL ...                                                 [OK]
+    test_DELETE_DIRURL_missing ...                                         [OK]
+    test_DELETE_DIRURL_missing2 ...                                        [OK]
+    test_DELETE_FILEURL ...                                                [OK]
+    test_DELETE_FILEURL_missing ...                                        [OK]
+    test_DELETE_FILEURL_missing2 ...                                       [OK]
+    test_GET_DIRECTORY_html ...                                            [OK]
+    test_GET_DIRECTORY_html_filenode_encoding ...                          [OK]
+    test_GET_DIRURL ...                                                    [OK]
+    test_GET_DIRURL_badtype ...                                            [OK]
+    test_GET_DIRURL_empty ...                                              [OK]
+    test_GET_DIRURL_json ...                                               [OK]
+    test_GET_DIRURL_json_format ...                                        [OK]
+    test_GET_DIRURL_literal ...                                            [OK]
+    test_GET_DIRURL_named_bad ...                                          [OK]
+    test_GET_DIRURL_readonly ...                                           [OK]
+    test_GET_DIRURL_readonly_dir ...                                       [OK]
+    test_GET_DIRURL_readonly_uri ...                                       [OK]
+    test_GET_DIRURL_uri ...                                                [OK]
+    test_GET_FILEURL ...                                                   [OK]
+    test_GET_FILEURL_badtype ...                                           [OK]
+    test_GET_FILEURL_info_mdmf ...                                         [OK]
+    test_GET_FILEURL_info_mdmf_extensions ...                              [OK]
+    test_GET_FILEURL_info_mdmf_readonly ...                                [OK]
+    test_GET_FILEURL_info_sdmf ...                                         [OK]
+    test_GET_FILEURL_json ...                                              [OK]
+    test_GET_FILEURL_json_mdmf ...                                         [OK]
+    test_GET_FILEURL_json_missing ...                                      [OK]
+    test_GET_FILEURL_json_mutable_type ...                                 [OK]
+    test_GET_FILEURL_missing ...                                           [OK]
+    test_GET_FILEURL_named ...                                             [OK]
+    test_GET_FILEURL_partial_end_range ...                                 [OK]
+    test_GET_FILEURL_partial_range ...                                     [OK]
+    test_GET_FILEURL_partial_range_overrun ...                             [OK]
+    test_GET_FILEURL_range ...                                             [OK]
+    test_GET_FILEURL_range_bad ...                                         [OK]
+    test_GET_FILEURL_save ...                                              [OK]
+    test_GET_FILEURL_uri ...                                               [OK]
+    test_GET_FILEURL_uri_missing ...                                       [OK]
+    test_GET_FILE_URI ...                                                  [OK]
+    test_GET_FILE_URI_badchild ...                                         [OK]
+    test_GET_FILE_URI_mdmf ...                                             [OK]
+    test_GET_FILE_URI_mdmf_extensions ...                                  [OK]
+    test_GET_FILE_URI_mdmf_readonly ...                                    [OK]
+    test_GET_URI_URL ...                                                   [OK]
+    test_GET_URI_URL_dir ...                                               [OK]
+    test_GET_URI_URL_missing ...                                           [OK]
+    test_GET_URI_form ...                                                  [OK]
+    test_GET_URI_form_bad ...                                              [OK]
+    test_GET_etags ...                                                     [OK]
+    test_GET_rename_form ...                                               [OK]
+    test_GET_root_html ...                                                 [OK]
+    test_GET_slash_file_bad ...                                            [OK]
+    test_GET_unhandled_URI ...                                             [OK]
+    test_GET_unhandled_URI_named ...                                       [OK]
+    test_HEAD_FILEURL ...                                                  [OK]
+    test_HEAD_FILEURL_partial_end_range ...                                [OK]
+    test_HEAD_FILEURL_partial_range ...                                    [OK]
+    test_HEAD_FILEURL_partial_range_overrun ...                            [OK]
+    test_HEAD_FILEURL_range ...                                            [OK]
+    test_POST_DIRURL_check ...                                             [OK]
+    test_POST_DIRURL_check_and_repair ...                                  [OK]
+    test_POST_DIRURL_deepcheck ...                                         [OK]
+    test_POST_DIRURL_deepcheck_and_repair ...                              [OK]
+    test_POST_DIRURL_deepcheck_no_ophandle ...                             [OK]
+    test_POST_DIRURL_deepsize ...                                          [OK]
+    test_POST_DIRURL_deepsize_no_ophandle ...                              [OK]
+    test_POST_DIRURL_deepstats ...                                         [OK]
+    test_POST_DIRURL_deepstats_no_ophandle ...                             [OK]
+    test_POST_DIRURL_manifest ...                                          [OK]
+    test_POST_DIRURL_manifest_no_ophandle ...                              [OK]
+    test_POST_DIRURL_stream_manifest ...                                   [OK]
+    test_POST_FILEURL_bad_t ...                                            [OK]
+    test_POST_FILEURL_check ...                                            [OK]
+    test_POST_FILEURL_check_and_repair ...                                 [OK]
+    test_POST_FILEURL_mdmf_check ...                                       [OK]
+    test_POST_FILEURL_mdmf_check_and_repair ...                            [OK]
+    test_POST_NEWDIRURL ...                                                [OK]
+    test_POST_NEWDIRURL_bad_format ...                                     [OK]
+    test_POST_NEWDIRURL_emptyname ...                                      [OK]
+    test_POST_NEWDIRURL_immutable ...                                      [OK]
+    test_POST_NEWDIRURL_immutable_bad ...                                  [OK]
+    test_POST_NEWDIRURL_initial_children ...                               [OK]
+    test_POST_NEWDIRURL_initial_children_bad_format ...                    [OK]
+    test_POST_NEWDIRURL_initial_children_mdmf ...                          [OK]
+    test_POST_NEWDIRURL_initial_children_sdmf ...                          [OK]
+    test_POST_NEWDIRURL_mdmf ...                                           [OK]
+    test_POST_NEWDIRURL_sdmf ...                                           [OK]
+    test_POST_bad_t ...                                                    [OK]
+    test_POST_check ...                                                    [OK]
+    test_POST_delete ...                                                   [OK]
+    test_POST_link_uri ...                                                 [OK]
+    test_POST_link_uri_no_replace_field ...                                [OK]
+    test_POST_link_uri_no_replace_queryarg ...                             [OK]
+    test_POST_link_uri_replace ...                                         [OK]
+    test_POST_link_uri_unknown_bad ...                                     [OK]
+    test_POST_link_uri_unknown_imm_good ...                                [OK]
+    test_POST_link_uri_unknown_ro_good ...                                 [OK]
+    test_POST_mkdir ...                                                    [OK]
+    test_POST_mkdir_2 ...                                                  [OK]
+    test_POST_mkdir_bad_format ...                                         [OK]
+    test_POST_mkdir_immutable ...                                          [OK]
+    test_POST_mkdir_immutable_bad ...                                      [OK]
+    test_POST_mkdir_initial_children ...                                   [OK]
+    test_POST_mkdir_initial_children_bad_format ...                        [OK]
+    test_POST_mkdir_initial_children_mdmf ...                              [OK]
+    test_POST_mkdir_initial_children_sdmf ...                              [OK]
+    test_POST_mkdir_mdmf ...                                               [OK]
+    test_POST_mkdir_no_parentdir_immutable ...                             [OK]
+    test_POST_mkdir_no_parentdir_immutable_bad ...                         [OK]
+    test_POST_mkdir_no_parentdir_initial_children ...                      [OK]
+    test_POST_mkdir_no_parentdir_noredirect ...                            [OK]
+    test_POST_mkdir_no_parentdir_noredirect2 ...                           [OK]
+    test_POST_mkdir_no_parentdir_noredirect_bad_format ...                 [OK]
+    test_POST_mkdir_no_parentdir_noredirect_mdmf ...                       [OK]
+    test_POST_mkdir_no_parentdir_noredirect_sdmf ...                       [OK]
+    test_POST_mkdir_no_parentdir_redirect ...                              [OK]
+    test_POST_mkdir_no_parentdir_redirect2 ...                             [OK]
+    test_POST_mkdir_no_parentdir_unexpected_children ...                   [OK]
+    test_POST_mkdir_no_replace_field ...                                   [OK]
+    test_POST_mkdir_no_replace_queryarg ...                                [OK]
+    test_POST_mkdir_replace ...                                            [OK]
+    test_POST_mkdir_sdmf ...                                               [OK]
+    test_POST_mkdir_whendone_field ...                                     [OK]
+    test_POST_mkdir_whendone_queryarg ...                                  [OK]
+    test_POST_mkdirs_2 ...                                                 [OK]
+    test_POST_noparent_bad ...                                             [OK]
+    test_POST_relink_dir ...                                               [OK]
+    test_POST_relink_file ...                                              [OK]
+    test_POST_relink_file_bad_replace ...                                  [OK]
+    test_POST_relink_file_explicitly_same_link ...                         [OK]
+    test_POST_relink_file_implicitly_same_link ...                         [OK]
+    test_POST_relink_file_into_file ...                                    [OK]
+    test_POST_relink_file_multi_level ...                                  [OK]
+    test_POST_relink_file_new_name ...                                     [OK]
+    test_POST_relink_file_no_replace ...                                   [OK]
+    test_POST_relink_file_no_replace_explicitly_same_link ...              [OK]
+    test_POST_relink_file_replace ...                                      [OK]
+    test_POST_relink_file_replace_only_files ...                           [OK]
+    test_POST_relink_file_replace_only_files_conflict ...                  [OK]
+    test_POST_relink_file_same_dir ...                                     [OK]
+    test_POST_relink_file_to_bad_uri ...                                   [OK]
+    test_POST_relink_file_to_nonexistent_dir ...                           [OK]
+    test_POST_relink_file_to_slash_fail ...                                [OK]
+    test_POST_relink_file_to_uri ...                                       [OK]
+    test_POST_rename_dir ...                                               [OK]
+    test_POST_rename_file ...                                              [OK]
+    test_POST_rename_file_from_slash_fail ...                              [OK]
+    test_POST_rename_file_no_replace_field ...                             [OK]
+    test_POST_rename_file_no_replace_queryarg ...                          [OK]
+    test_POST_rename_file_no_replace_same_link ...                         [OK]
+    test_POST_rename_file_redundant ...                                    [OK]
+    test_POST_rename_file_replace ...                                      [OK]
+    test_POST_rename_file_replace_only_files ...                           [OK]
+    test_POST_rename_file_replace_only_files_conflict ...                  [OK]
+    test_POST_rename_file_to_slash_fail ...                                [OK]
+    test_POST_set_children ...                                             [OK]
+    test_POST_set_children_with_hyphen ...                                 [OK]
+    test_POST_unlink ...                                                   [OK]
+    test_POST_upload ...                                                   [OK]
+    test_POST_upload_bad_format ...                                        [OK]
+    test_POST_upload_bad_format_unlinked ...                               [OK]
+    test_POST_upload_format ...                                            [OK]
+    test_POST_upload_format_unlinked ...                                   [OK]
+    test_POST_upload_mutable ...                                           [OK]
+    test_POST_upload_mutable_toobig ...                                    [OK]
+    test_POST_upload_named ...                                             [OK]
+    test_POST_upload_named_badfilename ...                                 [OK]
+    test_POST_upload_no_link ...                                           [OK]
+    test_POST_upload_no_link_mutable ...                                   [OK]
+    test_POST_upload_no_link_mutable_toobig ...                            [OK]
+    test_POST_upload_no_link_whendone ...                                  [OK]
+    test_POST_upload_no_link_whendone_results ...                          [OK]
+    test_POST_upload_no_replace_field ...                                  [OK]
+    test_POST_upload_no_replace_ok ...                                     [OK]
+    test_POST_upload_no_replace_queryarg ...                               [OK]
+    test_POST_upload_replace ...                                           [OK]
+    test_POST_upload_unicode ...                                           [OK]
+    test_POST_upload_unicode_named ...                                     [OK]
+    test_POST_upload_whendone ...                                          [OK]
+    test_PUT_DIRURL_bad_t ...                                              [OK]
+    test_PUT_DIRURL_uri ...                                                [OK]
+    test_PUT_DIRURL_uri_noreplace ...                                      [OK]
+    test_PUT_FILEURL_named_bad ...                                         [OK]
+    test_PUT_FILE_URI_badchild ...                                         [OK]
+    test_PUT_FILE_URI_mdmf ...                                             [OK]
+    test_PUT_FILE_URI_mdmf_extensions ...                                  [OK]
+    test_PUT_FILE_URI_mdmf_readonly ...                                    [OK]
+    test_PUT_FILE_URI_sdmf_readonly ...                                    [OK]
+    test_PUT_NEWDIRURL ...                                                 [OK]
+    test_PUT_NEWDIRURL_bad_format ...                                      [OK]
+    test_PUT_NEWDIRURL_blocked ...                                         [OK]
+    test_PUT_NEWDIRURL_exists ...                                          [OK]
+    test_PUT_NEWDIRURL_mdmf ...                                            [OK]
+    test_PUT_NEWDIRURL_mkdirs ...                                          [OK]
+    test_PUT_NEWDIRURL_mkdirs_bad_format ...                               [OK]
+    test_PUT_NEWDIRURL_mkdirs_mdmf ...                                     [OK]
+    test_PUT_NEWDIRURL_mkdirs_sdmf ...                                     [OK]
+    test_PUT_NEWDIRURL_sdmf ...                                            [OK]
+    test_PUT_NEWFILEURL ...                                                [OK]
+    test_PUT_NEWFILEURL_bad_format ...                                     [OK]
+    test_PUT_NEWFILEURL_bad_t ...                                          [OK]
+    test_PUT_NEWFILEURL_blocked ...                                        [OK]
+    test_PUT_NEWFILEURL_emptyname ...                                      [OK]
+    test_PUT_NEWFILEURL_mdmf ...                                           [OK]
+    test_PUT_NEWFILEURL_mkdirs ...                                         [OK]
+    test_PUT_NEWFILEURL_mutable ...                                        [OK]
+    test_PUT_NEWFILEURL_mutable_toobig ...                                 [OK]
+    test_PUT_NEWFILEURL_no_replace ...                                     [OK]
+    test_PUT_NEWFILEURL_not_mutable ...                                    [OK]
+    test_PUT_NEWFILEURL_range_bad ...                                      [OK]
+    test_PUT_NEWFILEURL_replace ...                                        [OK]
+    test_PUT_NEWFILEURL_sdmf ...                                           [OK]
+    test_PUT_NEWFILEURL_unlinked_bad_format ...                            [OK]
+    test_PUT_NEWFILEURL_unlinked_mdmf ...                                  [OK]
+    test_PUT_NEWFILEURL_unlinked_sdmf ...                                  [OK]
+    test_PUT_NEWFILEURL_uri ...                                            [OK]
+    test_PUT_NEWFILEURL_uri_no_replace ...                                 [OK]
+    test_PUT_NEWFILEURL_uri_replace ...                                    [OK]
+    test_PUT_NEWFILEURL_uri_unknown_bad ...                                [OK]
+    test_PUT_NEWFILEURL_uri_unknown_imm_good ...                           [OK]
+    test_PUT_NEWFILEURL_uri_unknown_ro_good ...                            [OK]
+    test_PUT_NEWFILE_URI ...                                               [OK]
+    test_PUT_NEWFILE_URI_mutable ...                                       [OK]
+    test_PUT_NEWFILE_URI_not_mutable ...                                   [OK]
+    test_PUT_NEWFILE_URI_only_PUT ...                                      [OK]
+    test_PUT_mkdir ...                                                     [OK]
+    test_PUT_mkdir_bad_format ...                                          [OK]
+    test_PUT_mkdir_mdmf ...                                                [OK]
+    test_PUT_mkdir_sdmf ...                                                [OK]
+    test_PUT_overwrite_only_files ...                                      [OK]
+    test_PUT_update_at_invalid_offset ...                                  [OK]
+    test_PUT_update_at_offset ...                                          [OK]
+    test_PUT_update_at_offset_immutable ...                                [OK]
+    test_bad_method ...                                                    [OK]
+    test_collected_ophandle_expiration ...                                 [OK]
+    test_create ...                                                        [OK]
+    test_frame_options ...                                                 [OK]
+    test_helper_status ...                                                 [OK]
+    test_incident ...                                                      [OK]
+    test_introducer_status ...                                             [OK]
+    test_ophandle_bad ...                                                  [OK]
+    test_ophandle_cancel ...                                               [OK]
+    test_ophandle_release_after_complete ...                               [OK]
+    test_ophandle_retainfor ...                                            [OK]
+    test_referrer_policy ...                                               [OK]
+    test_short_url ...                                                     [OK]
+    test_static ...                                                        [OK]
+    test_static_missing ...                                                [OK]
+    test_status ...                                                        [OK]
+    test_status_down_subpath ...                                           [OK]
+    test_status_mapupdate_subpath ...                                      [OK]
+    test_status_page_contains_links ...                                    [OK]
+    test_status_path_404_error ...                                         [OK]
+    test_status_path_nodash_error ...                                      [OK]
+    test_status_path_trailing_slashes ...                                  [OK]
+    test_status_publish_subpath ...                                        [OK]
+    test_status_retrieve_subpath ...                                       [OK]
+    test_status_up_subpath ...                                             [OK]
+    test_storage ...                                                       [OK]
+    test_uncollected_ophandle_expiration ...                               [OK]
+    test_uri_redirect ...                                                  [OK]
+    test_welcome_json ...                                                  [OK]
+    test_welcome_page_mkdir_button ...                                     [OK]
+allmydata.test.web.test_webish
+  TahoeLAFSRequestTests
+    test_form_fields_if_filename_set ...                                   [OK]
+    test_form_fields_if_name_is_file ...                                   [OK]
+    test_form_fields_require_correct_mime_type ...                         [OK]
+    test_no_form_fields ...                                                [OK]
+  TahoeLAFSSiteTests
+    test_file_censoring ...                                                [OK]
+    test_large_request ...                                                 [OK]
+    test_named_censoring ...                                               [OK]
+    test_small_content ...                                                 [OK]
+    test_unknown_request_size ...                                          [OK]
+    test_uri_censoring ...                                                 [OK]
+    test_uri_queryarg_censoring ...                                        [OK]
+
+===============================================================================
+[SKIPPED]
+Testing Python 2 behavior.
+
+allmydata.test.test_dictutil.TypedKeyDictPython2.test_python2
+===============================================================================
+[SKIPPED]
+Python 3 is always Unicode, regardless of OS.
+
+allmydata.test.test_encodingutil.EncodingUtilNonUnicodePlatform.test_listdir_unicode
+allmydata.test.test_encodingutil.MacOSXLeopard.test_unicode_to_output_py2
+allmydata.test.test_encodingutil.UbuntuKarmicUTF8.test_unicode_to_output_py2
+allmydata.test.test_encodingutil.Windows.test_unicode_to_output_py2
+===============================================================================
+[SKIPPED]
+Python 3 only.
+
+allmydata.test.test_encodingutil.MacOSXLeopard.test_unicode_platform_py2
+allmydata.test.test_encodingutil.UbuntuKarmicUTF8.test_unicode_platform_py2
+allmydata.test.test_encodingutil.Windows.test_unicode_platform_py2
+===============================================================================
+[SKIPPED]
+This test is not applicable to platforms that represent filenames as Unicode.
+
+allmydata.test.test_encodingutil.StdlibUnicode.test_open_unrepresentable
+===============================================================================
+[SKIPPED]
+This platform does not support the 'mbcs' filesystem encoding that we are testing for the benefit of a different platform.
+
+allmydata.test.test_encodingutil.Windows.test_listdir_unicode
+===============================================================================
+[SKIPPED]
+still broken
+
+allmydata.test.test_hung_server.HungServerDownloadTest.test_2_good_8_hung_then_1_recovers_mutable
+allmydata.test.test_hung_server.HungServerDownloadTest.test_2_good_8_hung_then_1_recovers_with_2_shares_mutable
+allmydata.test.test_hung_server.HungServerDownloadTest.test_3_good_7_hung_mutable
+===============================================================================
+[SKIPPED]
+No point in running on Python 3.
+
+allmydata.test.test_python2_regressions.PythonTwoRegressions.test_new_style_classes
+===============================================================================
+[SKIPPED]
+Only Python 2 exceptions must stringify to bytes.
+
+allmydata.test.test_runner.ParseOptionsTests.test_nonascii_unknown_subcommand_python2
+===============================================================================
+[SKIPPED]
+If your filesystem doesn't support efficient sparse files then it is very expensive (Mac OS X and Windows don't support efficient sparse files).
+
+allmydata.test.test_storage.Server.test_large_share
+===============================================================================
+[SKIPPED]
+get_argv is Windows-only
+
+allmydata.test.test_windows.GetArgvTests.test_argv_values
+allmydata.test.test_windows.GetArgvTests.test_get_argv_return_type
+===============================================================================
+[SKIPPED]
+intended for Windows-only codepaths
+
+allmydata.test.test_windows.UnicodeOutputTests.test_write_non_ascii
+===============================================================================
+[ERROR]
+Traceback (most recent call last):
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/twisted/trial/runner.py", line 596, in loadPackage
+    module = modinfo.load()
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/twisted/python/modules.py", line 389, in load
+    return self.pathEntry.pythonPath.moduleLoader(self.name)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/twisted/python/reflect.py", line 297, in namedAny
+    topLevelPackage = _importAndCheckStack(trialname)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/twisted/python/reflect.py", line 238, in _importAndCheckStack
+    return __import__(importName)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/test/cli/test_grid_manager.py", line 29, in <module>
+    class GridManagerCommandLine(SyncTestCase):
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/test/cli/test_grid_manager.py", line 76, in GridManagerCommandLine
+    def test_add_and_sign(self):
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/_pytest/outcomes.py", line 175, in skip
+    raise Skipped(msg=reason, allow_module_level=allow_module_level)
+builtins.Skipped: 
+
+allmydata.test.cli.test_grid_manager
+===============================================================================
+[ERROR]
+Traceback (most recent call last):
+Failure: twisted.internet.defer.TimeoutError: <allmydata.test.cli.test_invite.Invite testMethod=test_invite_no_client_abilities> (test_invite_no_client_abilities) still running at 120.0 secs
+
+allmydata.test.cli.test_invite.Invite.test_invite_no_client_abilities
+===============================================================================
+[ERROR]
+Traceback (most recent call last):
+Failure: twisted.trial.util.DirtyReactorAggregateError: Reactor was unclean.
+DelayedCalls: (set twisted.internet.base.DelayedCall.debug = True to debug)
+<DelayedCall 0x10ad34bb0 [59.84390592575073s] called=0 cancelled=0 _BatchedTimer._notify_bucket(1654708538000)>
+
+allmydata.test.cli.test_invite.Invite.test_invite_no_client_abilities
+===============================================================================
+[ERROR]
+Traceback (most recent call last):
+Failure: twisted.trial.util.DirtyReactorAggregateError: Reactor was unclean.
+Selectables:
+<<class 'twisted.internet.tcp.Client'> to ('18.205.86.254', 4000) at 108ee1130>
+
+allmydata.test.cli.test_invite.Invite.test_invite_no_client_abilities
+===============================================================================
+[ERROR]
+Traceback (most recent call last):
+Failure: twisted.internet.defer.TimeoutError: <allmydata.test.cli.test_invite.Invite testMethod=test_invite_no_server_abilities> (test_invite_no_server_abilities) still running at 120.0 secs
+
+allmydata.test.cli.test_invite.Invite.test_invite_no_server_abilities
+===============================================================================
+[ERROR]
+Traceback (most recent call last):
+Failure: twisted.trial.util.DirtyReactorAggregateError: Reactor was unclean.
+DelayedCalls: (set twisted.internet.base.DelayedCall.debug = True to debug)
+<DelayedCall 0x108f1c400 [59.67177128791809s] called=0 cancelled=0 _BatchedTimer._notify_bucket(1654708658000)>
+
+allmydata.test.cli.test_invite.Invite.test_invite_no_server_abilities
+===============================================================================
+[ERROR]
+Traceback (most recent call last):
+Failure: twisted.trial.util.DirtyReactorAggregateError: Reactor was unclean.
+Selectables:
+<<class 'twisted.internet.tcp.Client'> to ('3.220.138.46', 4000) at 109c0b310>
+
+allmydata.test.cli.test_invite.Invite.test_invite_no_server_abilities
+===============================================================================
+[ERROR]
+Traceback (most recent call last):
+Failure: twisted.internet.defer.TimeoutError: <allmydata.test.cli.test_invite.Invite testMethod=test_invite_success> (test_invite_success) still running at 120.0 secs
+
+allmydata.test.cli.test_invite.Invite.test_invite_success
+===============================================================================
+[ERROR]
+Traceback (most recent call last):
+Failure: twisted.trial.util.DirtyReactorAggregateError: Reactor was unclean.
+DelayedCalls: (set twisted.internet.base.DelayedCall.debug = True to debug)
+<DelayedCall 0x109ac1be0 [59.58562994003296s] called=0 cancelled=0 _BatchedTimer._notify_bucket(1654708778000)>
+
+allmydata.test.cli.test_invite.Invite.test_invite_success
+===============================================================================
+[ERROR]
+Traceback (most recent call last):
+Failure: twisted.trial.util.DirtyReactorAggregateError: Reactor was unclean.
+Selectables:
+<<class 'twisted.internet.tcp.Client'> to ('3.220.138.46', 4000) at 10b97fbb0>
+
+allmydata.test.cli.test_invite.Invite.test_invite_success
+===============================================================================
+[ERROR]
+Traceback (most recent call last):
+Failure: twisted.internet.defer.TimeoutError: <allmydata.test.cli.test_invite.Invite testMethod=test_invite_success_read_share_config> (test_invite_success_read_share_config) still running at 120.0 secs
+
+allmydata.test.cli.test_invite.Invite.test_invite_success_read_share_config
+===============================================================================
+[ERROR]
+Traceback (most recent call last):
+Failure: twisted.trial.util.DirtyReactorAggregateError: Reactor was unclean.
+DelayedCalls: (set twisted.internet.base.DelayedCall.debug = True to debug)
+<DelayedCall 0x108e8cd90 [59.507956743240356s] called=0 cancelled=0 _BatchedTimer._notify_bucket(1654708898000)>
+
+allmydata.test.cli.test_invite.Invite.test_invite_success_read_share_config
+===============================================================================
+[ERROR]
+Traceback (most recent call last):
+Failure: twisted.trial.util.DirtyReactorAggregateError: Reactor was unclean.
+Selectables:
+<<class 'twisted.internet.tcp.Client'> to ('18.205.86.254', 4000) at 10923db20>
+
+allmydata.test.cli.test_invite.Invite.test_invite_success_read_share_config
+===============================================================================
+[ERROR]
+Traceback (most recent call last):
+Failure: twisted.internet.defer.TimeoutError: <allmydata.test.cli.test_invite.Invite testMethod=test_invite_wrong_client_abilities> (test_invite_wrong_client_abilities) still running at 120.0 secs
+
+allmydata.test.cli.test_invite.Invite.test_invite_wrong_client_abilities
+===============================================================================
+[ERROR]
+Traceback (most recent call last):
+Failure: twisted.trial.util.DirtyReactorAggregateError: Reactor was unclean.
+DelayedCalls: (set twisted.internet.base.DelayedCall.debug = True to debug)
+<DelayedCall 0x109800100 [59.43993878364563s] called=0 cancelled=0 _BatchedTimer._notify_bucket(1654709018000)>
+
+allmydata.test.cli.test_invite.Invite.test_invite_wrong_client_abilities
+===============================================================================
+[ERROR]
+Traceback (most recent call last):
+Failure: twisted.trial.util.DirtyReactorAggregateError: Reactor was unclean.
+Selectables:
+<<class 'twisted.internet.tcp.Client'> to ('3.220.138.46', 4000) at 10963deb0>
+
+allmydata.test.cli.test_invite.Invite.test_invite_wrong_client_abilities
+===============================================================================
+[ERROR]
+Traceback (most recent call last):
+Failure: twisted.internet.defer.TimeoutError: <allmydata.test.cli.test_invite.Invite testMethod=test_invite_wrong_server_abilities> (test_invite_wrong_server_abilities) still running at 120.0 secs
+
+allmydata.test.cli.test_invite.Invite.test_invite_wrong_server_abilities
+===============================================================================
+[ERROR]
+Traceback (most recent call last):
+Failure: twisted.trial.util.DirtyReactorAggregateError: Reactor was unclean.
+DelayedCalls: (set twisted.internet.base.DelayedCall.debug = True to debug)
+<DelayedCall 0x109e09310 [0.3489799499511719s] called=0 cancelled=0 _BatchedTimer._notify_bucket(1654709079000)>
+
+allmydata.test.cli.test_invite.Invite.test_invite_wrong_server_abilities
+===============================================================================
+[ERROR]
+Traceback (most recent call last):
+Failure: twisted.trial.util.DirtyReactorAggregateError: Reactor was unclean.
+Selectables:
+<<class 'twisted.internet.tcp.Client'> to ('18.205.86.254', 4000) at 109d3c1c0>
+
+allmydata.test.cli.test_invite.Invite.test_invite_wrong_server_abilities
+===============================================================================
+[ERROR]
+Traceback (most recent call last):
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/test/cli/test_invite.py", line 184, in test_create_node_illegal_option
+    rc, out, err = yield run_cli(
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/test/common_util.py", line 158, in _err
+    f.trap(SystemExit)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/twisted/python/failure.py", line 476, in trap
+    self.raiseException()
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/twisted/python/failure.py", line 500, in raiseException
+    raise self.value.with_traceback(self.tb)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/scripts/runner.py", line 239, in _error
+    f.trap(usage.UsageError)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/twisted/python/failure.py", line 476, in trap
+    self.raiseException()
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/twisted/python/failure.py", line 500, in raiseException
+    raise self.value.with_traceback(self.tb)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/scripts/create_node.py", line 430, in create_node
+    remote_config = yield _get_config_via_wormhole(config)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/scripts/create_node.py", line 394, in _get_config_via_wormhole
+    server_intro = yield wh.get_message()
+wormhole.errors.ServerError: crowded
+
+allmydata.test.cli.test_invite.Join.test_create_node_illegal_option
+===============================================================================
+[ERROR]
+Traceback (most recent call last):
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/test/cli/test_invite.py", line 143, in test_create_node_join
+    rc, out, err = yield run_cli(
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/test/common_util.py", line 158, in _err
+    f.trap(SystemExit)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/twisted/python/failure.py", line 476, in trap
+    self.raiseException()
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/twisted/python/failure.py", line 500, in raiseException
+    raise self.value.with_traceback(self.tb)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/scripts/runner.py", line 239, in _error
+    f.trap(usage.UsageError)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/twisted/python/failure.py", line 476, in trap
+    self.raiseException()
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/twisted/python/failure.py", line 500, in raiseException
+    raise self.value.with_traceback(self.tb)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/scripts/create_node.py", line 430, in create_node
+    remote_config = yield _get_config_via_wormhole(config)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/scripts/create_node.py", line 394, in _get_config_via_wormhole
+    server_intro = yield wh.get_message()
+wormhole.errors.ServerError: crowded
+
+allmydata.test.cli.test_invite.Join.test_create_node_join
+===============================================================================
+[ERROR]
+Traceback (most recent call last):
+Failure: testtools.testresult.real._StringException: Traceback (most recent call last):
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/twisted/internet/defer.py", line 190, in maybeDeferred
+    result = f(*args, **kwargs)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/testtools/testcase.py", line 702, in _run_test_method
+    return self._get_test_method()()
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/test/eliotutil.py", line 171, in run_with_logging
+    return test_method(*args, **kwargs)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/test/test_grid_manager.py", line 60, in test_load_certificates
+    certs = config.get_grid_manager_certificates()
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/node.py", line 537, in get_grid_manager_certificates
+    fname = self.get_config_path(fname.decode('utf8'))
+AttributeError: 'str' object has no attribute 'decode'
+
+
+allmydata.test.test_grid_manager.GridManagerUtilities.test_load_certificates
+===============================================================================
+[ERROR]
+Traceback (most recent call last):
+Failure: testtools.testresult.real._StringException: Traceback (most recent call last):
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/twisted/internet/defer.py", line 190, in maybeDeferred
+    result = f(*args, **kwargs)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/testtools/testcase.py", line 702, in _run_test_method
+    return self._get_test_method()()
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/test/eliotutil.py", line 171, in run_with_logging
+    return test_method(*args, **kwargs)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/test/test_grid_manager.py", line 212, in test_invalid_bad_private_key
+    json.dump(bad_config, f)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 180, in dump
+    fp.write(chunk)
+TypeError: a bytes-like object is required, not 'str'
+
+
+allmydata.test.test_grid_manager.GridManagerVerifier.test_invalid_bad_private_key
+===============================================================================
+[ERROR]
+Traceback (most recent call last):
+Failure: testtools.testresult.real._StringException: Traceback (most recent call last):
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/twisted/internet/defer.py", line 190, in maybeDeferred
+    result = f(*args, **kwargs)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/testtools/testcase.py", line 702, in _run_test_method
+    return self._get_test_method()()
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/test/eliotutil.py", line 171, in run_with_logging
+    return test_method(*args, **kwargs)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/test/test_grid_manager.py", line 191, in test_invalid_no_private_key
+    json.dump(bad_config, f)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 180, in dump
+    fp.write(chunk)
+TypeError: a bytes-like object is required, not 'str'
+
+
+allmydata.test.test_grid_manager.GridManagerVerifier.test_invalid_no_private_key
+===============================================================================
+[ERROR]
+Traceback (most recent call last):
+Failure: testtools.testresult.real._StringException: Traceback (most recent call last):
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/twisted/internet/defer.py", line 190, in maybeDeferred
+    result = f(*args, **kwargs)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/testtools/testcase.py", line 702, in _run_test_method
+    return self._get_test_method()()
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/test/eliotutil.py", line 171, in run_with_logging
+    return test_method(*args, **kwargs)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/test/test_grid_manager.py", line 171, in test_invalid_no_version
+    json.dump(bad_config, f)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 180, in dump
+    fp.write(chunk)
+TypeError: a bytes-like object is required, not 'str'
+
+
+allmydata.test.test_grid_manager.GridManagerVerifier.test_invalid_no_version
+===============================================================================
+[ERROR]
+Traceback (most recent call last):
+Failure: testtools.testresult.real._StringException: Traceback (most recent call last):
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/twisted/internet/defer.py", line 190, in maybeDeferred
+    result = f(*args, **kwargs)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/testtools/testcase.py", line 702, in _run_test_method
+    return self._get_test_method()()
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/test/eliotutil.py", line 171, in run_with_logging
+    return test_method(*args, **kwargs)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/test/test_grid_manager.py", line 237, in test_invalid_storage_server
+    json.dump(bad_config, f)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 180, in dump
+    fp.write(chunk)
+TypeError: a bytes-like object is required, not 'str'
+
+
+allmydata.test.test_grid_manager.GridManagerVerifier.test_invalid_storage_server
+===============================================================================
+[ERROR]
+Traceback (most recent call last):
+Failure: testtools.testresult.real._StringException: Traceback (most recent call last):
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/twisted/internet/defer.py", line 190, in maybeDeferred
+    result = f(*args, **kwargs)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/testtools/testcase.py", line 702, in _run_test_method
+    return self._get_test_method()()
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/test/eliotutil.py", line 171, in run_with_logging
+    return test_method(*args, **kwargs)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/test/test_grid_manager.py", line 144, in test_serialize
+    save_grid_manager(fp, self.gm)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/grid_manager.py", line 276, in save_grid_manager
+    data = json.dumps(
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bytes is not JSON serializable
+
+
+allmydata.test.test_grid_manager.GridManagerVerifier.test_serialize
+===============================================================================
+[ERROR]
+Traceback (most recent call last):
+Failure: testtools.testresult.real._StringException: Traceback (most recent call last):
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/twisted/internet/defer.py", line 190, in maybeDeferred
+    result = f(*args, **kwargs)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/testtools/testcase.py", line 702, in _run_test_method
+    return self._get_test_method()()
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/test/eliotutil.py", line 171, in run_with_logging
+    return test_method(*args, **kwargs)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/test/test_grid_manager.py", line 83, in test_sign_cert
+    cert = self.gm.sign("test", timedelta(seconds=86400))
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/grid_manager.py", line 211, in sign
+    cert_data = json.dumps(cert_info, separators=(',',':'), sort_keys=True).encode('utf8')
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bytes is not JSON serializable
+
+
+allmydata.test.test_grid_manager.GridManagerVerifier.test_sign_cert
+===============================================================================
+[ERROR]
+Traceback (most recent call last):
+Failure: testtools.testresult.real._StringException: Traceback (most recent call last):
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/twisted/internet/defer.py", line 190, in maybeDeferred
+    result = f(*args, **kwargs)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/venv/lib/python3.9/site-packages/testtools/testcase.py", line 702, in _run_test_method
+    return self._get_test_method()()
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/test/eliotutil.py", line 171, in run_with_logging
+    return test_method(*args, **kwargs)
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/test/test_grid_manager.py", line 286, in test_validate_cert
+    cert0 = self.gm.sign("test0", timedelta(seconds=86400))
+  File "/Users/asyncverse/projects/meejah-tahoe-lafs/src/allmydata/grid_manager.py", line 211, in sign
+    cert_data = json.dumps(cert_info, separators=(',',':'), sort_keys=True).encode('utf8')
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.12/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bytes is not JSON serializable
+
+
+allmydata.test.test_grid_manager.GridManagerVerifier.test_validate_cert
+-------------------------------------------------------------------------------
+Ran 1758 tests in 1625.850s
+
+FAILED (skips=19, errors=29, successes=1722)

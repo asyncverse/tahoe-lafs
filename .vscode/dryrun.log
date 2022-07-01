@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/edisonabahurire/projects/my-tahoe-lafs'
+echo "no default target"
+make: Leaving directory `/Users/edisonabahurire/projects/my-tahoe-lafs'
+ 

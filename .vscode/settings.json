@@ -1,0 +1,15 @@
+{
+    "python.formatting.provider": "none", // "black",
+    "editor.formatOnPaste": false,//true
+    "files.autoSaveDelay": 1,
+    // "python.sortImports.args": [
+    //     "--profile",
+    //     "black"
+    // ],
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": false, // true
+        }
+    },
+    "editor.formatOnSave": false, // true
+}

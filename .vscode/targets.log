@@ -1,0 +1,607 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+
+# This program built for i386-apple-darwin11.3.0
+ 
+make: *** No rule to make target `all'.  Stop.
+
+
+# Make data base, printed on Fri Jul  1 01:31:36 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+DEV_USER = edison
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+VSCODE_LOG_NATIVE = false
+# environment
+PYTHONUNBUFFERED = NON-EMPTY-STRING
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+TEST_PHONE = 3039414313
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# makefile
+CURDIR := /Users/edisonabahurire/projects/my-tahoe-lafs
+# makefile (from `Makefile', line 7)
+SHELL := bash
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+_ = /usr/bin/make
+# makefile (from `Makefile', line 23)
+TEST_SUITE = allmydata
+# makefile (from `Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# environment
+TEST_EMAIL = edison@stayapp.co
+# makefile (from `Makefile', line 21)
+SOURCES = src/allmydata static misc setup.py
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+__CFBundleIdentifier = com.microsoft.VSCode
+# environment
+INFOPATH = /opt/homebrew/share/info:
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/6w/cxnh2j9j51ggv9305pyvx8440000gn/T/vscode-ipc-d6ea3e9b-f0d5-4a36-a796-970f15e9c86a.sock
+# environment
+VSCODE_CWD = /Users/edisonabahurire/projects/my-tahoe-lafs
+# environment
+PATH = /Users/edisonabahurire/projects/my-tahoe-lafs/venv/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+# makefile (from `Makefile', line 20)
+VIRTUAL_ENV = ./.tox/py37
+# environment
+LaunchInstanceID = D4D8AEAB-573C-417B-8FFD-CE77D432FC75
+# environment
+VSCODE_LOG_STACK = false
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# default
+.FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
+# environment
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.y3GGwponXi/Listeners
+# automatic
+%F = $(notdir $%)
+# environment
+DOCKER_BUILDKIT = 1
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+PWD = /Users/edisonabahurire/projects/my-tahoe-lafs
+# environment
+HOMEBREW_CELLAR = /opt/homebrew/Cellar
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# makefile (from `Makefile', line 16)
+PYTHON = python
+# environment
+MANPATH = /opt/homebrew/share/man::
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /Users/edisonabahurire
+# default
+MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
+# environment
+VSCODE_CLI = 1
+# environment
+VSCODE_CODE_CACHE_PATH = /Users/edisonabahurire/Library/Application Support/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
+# environment
+LOGNAME = edisonabahurire
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+XPC_FLAGS = 0x0
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 3
+# default
+MAKE_VERSION := 3.81
+# environment
+USER = edisonabahurire
+# makefile
+.DEFAULT_GOAL := default
+# environment
+TERM_SESSION_ID = A3C19341-9F72-484A-B72E-35CDF2B82AED
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# default
+MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
+# makefile (from `Makefile', line 18)
+PYFLAKES = flake8
+# environment
+TERM_PROGRAM = Apple_Terminal
+# default
+.VARIABLES := 
+# environment
+TMPDIR = /var/folders/6w/cxnh2j9j51ggv9305pyvx8440000gn/T/
+# automatic
+*F = $(notdir $*)
+# environment
+VSCODE_IPC_HOOK = /Users/edisonabahurire/Library/Application Support/Code/1.68.1-main.sock
+# makefile
+MAKEFLAGS =  --warn-undefined-variables -sRrqp
+# environment
+MFLAGS = - --warn-undefined-variables -sRrqp
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+TERM_PROGRAM_VERSION = 445
+# makefile (from `Makefile', line 9)
+.SHELLFLAGS := -xeu -o pipefail -c
+# environment
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.614528.614534.F2F39057-4B70-4A0B-B3FE-7DA5BC516664
+# environment
+HOMEBREW_PREFIX = /opt/homebrew
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# automatic
++F = $(notdir $+)
+# makefile (from `Makefile', line 22)
+APPNAME = tahoe-lafs
+# environment
+HOMEBREW_REPOSITORY = /opt/homebrew
+# environment
+__CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x0
+# environment
+COMMAND_MODE = unix2003
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# environment
+LC_ALL = C
+# environment
+SECURITYSESSIONID = 186b2
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# environment
+MAKELEVEL := 0
+# environment
+LANG = C
+# environment
+TERM = xterm-256color
+# environment
+VSCODE_PID = 5597
+# variable set hash-table stats:
+# Load=86/1024=8%, Rehash=0, Collisions=3/117=3%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 16777229, inode 796813): 58 files, no impossibilities.
+
+# 58 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+pyflakes:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 103):
+	$(PYFLAKES) $(SOURCES) |sort |uniq
+	@echo
+	
+
+.ONESHELL:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+setup.py:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+check-interfaces:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 88):
+	$(PYTHON) misc/coding_tools/check-interfaces.py 2>&1 |tee violations.txt
+	@echo
+	
+
+# Not a target:
+all:
+#  Command-line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+.PHONY: default test test-venv-coverage test-py3-all make-version build-osx-pkg test-osx-pkg upload-osx-pkg code-checks check-interfaces check-debugging check-miscaptures pyflakes check-umids -check-umids doc-checks check-rst count-lines test-get-ignore test-clean clean distclean find-trailing-spaces -find-trailing-spaces fetch-and-unpack-deps test-desert-island test-pip-install tarballs upload-tarballs
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+tarballs:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 213):
+	tox -e tarballs
+	
+
+distclean: clean
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 182):
+	rm -rf src/*.egg-info
+	rm -f src/allmydata/_version.py
+	rm -f src/allmydata/_appname.py
+	rm -rf ./.tox/
+	
+
+check-umids:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 108):
+	$(PYTHON) misc/coding_tools/check-umids.py `find $(SOURCES) -name '*.py' -not -name 'old.py'`
+	@echo
+	
+
+test-clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 160):
+	find . |grep -vEe "allfiles.tmp|src/allmydata/_(version|appname).py" |sort >allfiles.tmp.old
+	$(MAKE)
+	$(MAKE) distclean
+	find . |grep -vEe "allfiles.tmp|src/allmydata/_(version|appname).py" |sort >allfiles.tmp.new
+	diff allfiles.tmp.old allfiles.tmp.new
+	
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-19 14:34:45
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+ 
+test: .tox/create-venvs.log
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 36):
+	tox --develop -e codechecks
+	tox --develop -p auto -e 'py37'
+	
+
+src/allmydata/_version.py:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 223):
+	$(MAKE) make-version
+	
+
+test-osx-pkg:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 69):
+	$(PYTHON) misc/build_helpers/test-osx-pkg.py
+	
+
+test-get-ignore:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+build-osx-pkg:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 65):
+	misc/build_helpers/build-osx-pkg.sh $(APPNAME)
+	
+
+test-py3-all: .tox/create-venvs.log
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 54):
+	tox --develop -e py37 allmydata
+	
+
+.tox/create-venvs.log: tox.ini setup.py
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 226):
+	tox --notest -p all | tee -a "$(@)"
+	
+
+default:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 30):
+	@echo "no default target"
+	
+
+count-lines:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 126):
+	@echo -n "files: "
+	@find src -name '*.py' |grep -v /build/ |wc -l
+	@echo -n "lines: "
+	@cat `find src -name '*.py' |grep -v /build/` |wc -l
+	@echo -n "TODO: "
+	@grep TODO `find src -name '*.py' |grep -v /build/` | wc -l
+	@echo -n "XXX: "
+	@grep XXX `find src -name '*.py' |grep -v /build/` | wc -l
+	
+
+.SILENT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+-check-umids:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 113):
+	-$(PYTHON) misc/coding_tools/check-umids.py `find $(SOURCES) -name '*.py' -not -name 'old.py'`
+	@echo
+	
+
+check-miscaptures:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 98):
+	$(PYTHON) misc/coding_tools/check-miscaptures.py $(SOURCES) 2>&1 |tee miscaptures.txt
+	@echo
+	
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+-find-trailing-spaces:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 195):
+	-$(PYTHON) misc/coding_tools/find-trailing-spaces.py -r $(SOURCES)
+	@echo
+	
+
+test-venv-coverage:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 43):
+	rm -f ./.coverage.*
+	test_exit=
+	$(VIRTUAL_ENV)/bin/coverage run -m twisted.trial --rterrors --reporter=timing \
+	$(TEST_SUITE) || test_exit="$$?"
+	$(VIRTUAL_ENV)/bin/coverage combine
+	$(VIRTUAL_ENV)/bin/coverage xml || true
+	$(VIRTUAL_ENV)/bin/coverage report
+	if [ ! -z "$$test_exit" ]; then exit "$$test_exit"; fi
+	
+
+fetch-and-unpack-deps:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 200):
+	@echo "test-and-unpack-deps is obsolete"
+	
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 173):
+	rm -rf build _trial_temp .built
+	rm -f `find src *.egg -name '*.so' -or -name '*.pyc'`
+	rm -rf support dist
+	rm -rf `ls -d *.egg | grep -vEe"setuptools-|setuptools_darcs-|darcsver-"`
+	rm -rf *.pyc
+	rm -f *.pkg
+	
+
+test-git-ignore:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 155):
+	$(MAKE)
+	$(PYTHON) misc/build_helpers/test-git-ignore.py
+	
+
+upload-tarballs:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 217):
+	@if [ "X${BB_BRANCH}" = "Xmaster" ] || [ "X${BB_BRANCH}" = "X" ]; then for f in dist/*; do flappclient --furlfile ~/.tahoe-tarball-upload.furl upload-file $$f; done ; else echo not uploading tarballs because this is not trunk but is branch \"${BB_BRANCH}\" ; fi
+	
+
+check-rst:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 121):
+	@for x in `find *.rst docs -name "*.rst"`; do rst2html -v $${x} >/dev/null; done 2>&1 |grep -v 'Duplicate implicit target name:'
+	@echo
+	
+
+find-trailing-spaces:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 190):
+	$(PYTHON) misc/coding_tools/find-trailing-spaces.py -r $(SOURCES)
+	@echo
+	
+
+test-pip-install:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 208):
+	@echo "test-pip-install is obsolete"
+	
+
+# Not a target:
+tox.ini:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+.DELETE_ON_ERROR:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+check-debugging:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 93):
+	$(PYTHON) misc/coding_tools/check-debugging.py
+	@echo
+	
+
+test-desert-island:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 204):
+	@echo "test-desert-island is obsolete"
+	
+
+code-checks: check-interfaces check-debugging check-miscaptures -find-trailing-spaces -check-umids pyflakes
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+make-version:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 60):
+	$(PYTHON) ./setup.py update_version
+	
+
+doc-checks: check-rst
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+upload-osx-pkg:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 73):
+ 
+	# [Failure instance: Traceback: <class 'OpenSSL.SSL.Error'>: [('SSL routines', 'ssl3_read_bytes', 'tlsv1 alert unknown ca'), ('SSL routines', 'ssl3_write_bytes', 'ssl handshake failure')]
+	#
+	# @echo "uploading to ~tahoe-tarballs/OS-X-packages/ via flappserver"
+	# @if [ "X${BB_BRANCH}" = "Xmaster" ] || [ "X${BB_BRANCH}" = "X" ]; then \
+	#   flappclient --furlfile ~/.tahoe-osx-pkg-upload.furl upload-file tahoe-lafs-*-osx.pkg; \
+	#  else \
+	#   echo not uploading tahoe-lafs-osx-pkg because this is not trunk but is branch \"${BB_BRANCH}\" ; \
+	# fi
+	
+
+# files hash-table stats:
+# Load=42/1024=4%, Rehash=0, Collisions=0/123=0%
+# VPATH Search Paths
+
+# No `vpath' search paths.
+
+# No general (`VPATH' variable) search path.
+
+# # of strings in strcache: 1
+# # of strcache buffers: 1
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
+
+# Finished Make data base on Fri Jul  1 01:31:36 2022
+
+ 
