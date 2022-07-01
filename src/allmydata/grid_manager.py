@@ -4,6 +4,7 @@ import json
 from datetime import (
     datetime,
 )
+from time import time
 
 from allmydata.crypto import (
     ed25519,
@@ -32,7 +33,7 @@ class _GridManagerStorageServer(object):
         self.certificates.append(certificate)
 
     def public_key_string(self):
-        return ed25519.string_from_verifying_key(self.public_key)
+        return ed25519.string_from_verifying_key(self.public_key).decode()
 
     def marshal(self):
         return {
@@ -288,7 +289,7 @@ def save_grid_manager(file_path, grid_manager, create=True):
             if create:
                 raise
         with file_path.child("config.json").open("w") as f:
-            f.write("{}\n".format(data))
+            f.write("{}\n".format(data).encode())
 
 
 def parse_grid_manager_certificate(gm_data):
@@ -336,8 +337,8 @@ def validate_grid_manager_certificate(gm_key, alleged_cert):
     try:
         ed25519.verify_signature(
             gm_key,
-            base32.a2b(alleged_cert['signature'].encode('ascii')),
-            alleged_cert['certificate'].encode('ascii'),
+            base32.a2b(alleged_cert['signature']),
+            alleged_cert['certificate'],
         )
     except ed25519.BadSignature:
         return None
