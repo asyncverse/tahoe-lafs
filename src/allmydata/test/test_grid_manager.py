@@ -115,7 +115,7 @@ class GridManagerVerifier(SyncTestCase):
             data["storage_servers"],
             {
                 "test": {
-                    "public_key": ed25519.string_from_verifying_key(pub),
+                    "public_key": ed25519.string_from_verifying_key(pub).decode(),
                 }
             }
         )
@@ -142,6 +142,7 @@ class GridManagerVerifier(SyncTestCase):
         fp = FilePath(tempdir)
 
         save_grid_manager(fp, self.gm)
+
         gm2 = load_grid_manager(fp)
         self.assertEqual(
             self.gm.public_identity(),
@@ -163,12 +164,15 @@ class GridManagerVerifier(SyncTestCase):
         """
         tempdir = self.mktemp()
         fp = FilePath(tempdir)
+        fp.makedirs()
+
         bad_config = {
             "private_key": "at least we have one",
         }
-        fp.makedirs()
+        bad_config_bytes = json.dumps(bad_config).encode()
+
         with fp.child("config.json").open("w") as f:
-            json.dump(bad_config, f)
+            f.write(bad_config_bytes)
 
         with self.assertRaises(ValueError) as ctx:
             load_grid_manager(fp)
@@ -183,12 +187,15 @@ class GridManagerVerifier(SyncTestCase):
         """
         tempdir = self.mktemp()
         fp = FilePath(tempdir)
+        fp.makedirs()
+
         bad_config = {
             "grid_manager_config_version": 0,
         }
-        fp.makedirs()
+        bad_config_bytes = json.dumps(bad_config).encode()
+
         with fp.child("config.json").open("w") as f:
-            json.dump(bad_config, f)
+            f.write(bad_config_bytes)
 
         with self.assertRaises(ValueError) as ctx:
             load_grid_manager(fp)
@@ -203,13 +210,16 @@ class GridManagerVerifier(SyncTestCase):
         """
         tempdir = self.mktemp()
         fp = FilePath(tempdir)
+        fp.makedirs()
+
         bad_config = {
             "grid_manager_config_version": 0,
             "private_key": "not actually encoded key",
         }
-        fp.makedirs()
+        bad_config_bytes = json.dumps(bad_config).encode()
+
         with fp.child("config.json").open("w") as f:
-            json.dump(bad_config, f)
+            f.write(bad_config_bytes)
 
         with self.assertRaises(ValueError) as ctx:
             load_grid_manager(fp)
@@ -225,6 +235,8 @@ class GridManagerVerifier(SyncTestCase):
         """
         tempdir = self.mktemp()
         fp = FilePath(tempdir)
+        fp.makedirs()
+
         bad_config = {
             "grid_manager_config_version": 0,
             "private_key": "priv-v0-ub7knkkmkptqbsax4tznymwzc4nk5lynskwjsiubmnhcpd7lvlqa",
@@ -232,9 +244,10 @@ class GridManagerVerifier(SyncTestCase):
                 "bad": {}
             }
         }
-        fp.makedirs()
+        bad_config_bytes = json.dumps(bad_config).encode()
+
         with fp.child("config.json").open("w") as f:
-            json.dump(bad_config, f)
+            f.write(bad_config_bytes)
 
         with self.assertRaises(ValueError) as ctx:
             load_grid_manager(fp)
@@ -288,7 +301,7 @@ class GridManagerVerifier(SyncTestCase):
         verify = create_grid_manager_verifier(
             [self.gm._public_key],
             [cert0],
-            ed25519.string_from_verifying_key(pub0),
+            ed25519.string_from_verifying_key(pub0).decode(),
         )
 
         self.assertTrue(verify())
