@@ -23,9 +23,12 @@ from allmydata.grid_manager import (
     parse_grid_manager_certificate,
 )
 from allmydata.scripts.cli import _default_nodedir
-from allmydata.scripts.common import BaseOptions
+from allmydata.scripts.common import BaseOptions, BasedirOptions
 from allmydata.util.encodingutil import argv_to_abspath
-
+from allmydata.storage import (
+    crawler,
+    expirer,
+)
 
 class GenerateKeypairOptions(BaseOptions):
 
@@ -155,7 +158,7 @@ def add_grid_manager_cert(options):
     config = read_config(nd, "portnum")
     cert_fname = "{}.cert".format(options['name'])
     cert_path = FilePath(config.get_config_path(cert_fname))
-    cert_bytes = json.dumps(options.certificate_data, indent=4) + '\n'
+    cert_bytes = str.encode(json.dumps(options.certificate_data, indent=4) + '\n')
     cert_name = options['name']
 
     if cert_path.exists():
